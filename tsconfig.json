@@ -9,6 +9,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
+    "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -20,7 +21,11 @@
     "baseUrl": ".",
     "paths": {
         "@src/*": ["./src/*"]
-    }
+    },
+    "typeRoots": [ "./src/types", "./node_modules/@types"]
+  },
+  "ts-node": {
+    "fs": "empty"
   },
   "include": [
     "next-env.d.ts",

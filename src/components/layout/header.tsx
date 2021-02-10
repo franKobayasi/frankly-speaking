@@ -4,11 +4,11 @@ import Link from 'next/link'
 const navConfig = [
     {
         title: "Blog",
-        pathName: "blog"
+        pathName: "/blog"
     },
     {
         title: "PortFolio",
-        pathName: "portfolio"
+        pathName: "/portfolio"
     },
     {
         title: "Home",
@@ -18,12 +18,15 @@ const navConfig = [
 
 
 export default function Header () {
-    return <Wrapper className="box-100vw">
+    return <Wrapper>
         <Logo/>
         <Nav>
             {
                 navConfig.map(nav=>
-                <Link href={nav.pathName}>
+                <Link 
+                    href={nav.pathName}
+                    key={nav.pathName}
+                    >
                     <NavItem >{nav.title}</NavItem>
                 </Link>)
             }
