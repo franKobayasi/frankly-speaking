@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const navConfig = [
     {
@@ -16,15 +17,17 @@ const navConfig = [
 ]
 
 export default function Header() {
+    const router = useRouter()
+    
     return (
         <header className="header-stripe">
             <nav className="header-nav">
-                <div className="flex gap-[2px]">
+                <div style={{ display: 'flex', gap: '1px' }}>
                     {navConfig.map((nav) => (
                         <Link 
                             href={nav.pathName}
                             key={nav.pathName}
-                            className="header-link"
+                            className={`header-link ${router.pathname === nav.pathName ? 'active' : ''}`}
                         >
                             {nav.title}
                         </Link>
