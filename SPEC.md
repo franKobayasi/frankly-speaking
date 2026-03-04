@@ -29,6 +29,8 @@
 
 參考 **Stripe Developer Blog** (https://stripe.dev/blog)：
 
+- **Header（導航欄）**：極簡風格，左側對齊，無背景色，無 logo
+- **Page Title（頁面標題）**：左側對齊，大字體，粗體
 - **卡片式佈局**：每個文章預覽為獨立白色卡片
 - **圓角邊框**：border-radius: 8px
 - **柔和陰影**：細緻的投影效果
@@ -50,9 +52,85 @@ Border:       #E3E8EE (卡片邊框)
 Hover BG:     #F6F9FC (懸停背景)
 Tag BG:       #E0E7FF (標籤背景 - 淺紫)
 Tag Text:     #635BFF (標籤文字)
+Header Link:  #697386 (Header 連結文字)
+Header Divider:#E3E8EE (Header 分割線)
 ```
 
-### 3.3 字體系統
+### 3.3 Header 風格規格 (Stripe 極簡風)
+
+**當前問題**：現有 header.tsx 使用 styled-components，風格不符合 Stripe 風格：
+- 有灰色背景 (#eee)
+- Logo 在左側
+- 導航在右側（靠右）
+
+**Stripe 風格 Header 規格**：
+
+```tsx
+// Header 結構
+<HeaderWrapper>
+  <HeaderDivider />
+  <NavContainer>
+    <NavLinks>
+      <NavLink>Docs</NavLink>
+      <NavLink>Learn</NavLink>
+      <NavLink>Support</NavLink>
+      <NavLink>Blog</NavLink>
+    </NavLinks>
+  </NavContainer>
+</HeaderWrapper>
+```
+
+| 元素 | 樣式規格 |
+|------|----------|
+| Header 背景 | 透明 (無背景色) |
+| Header 高度 | 56px |
+| 分割線 | 1px solid #E3E8EE，底部 |
+| 導航容器 | max-width: 1200px, margin: 0 auto, padding: 0 24px |
+| 導航連結對齊 | 左側對齊 (flex-start) |
+| 導航連結間距 | gap: 24px |
+| 連結字體 | Inter, -apple-system, sans-serif |
+| 連結字體大小 | 14px |
+| 連結字體顏色 | #697386 |
+| 連結 hover 顏色 | #1A1F36 |
+| 移除 Logo | 完全移除 |
+| 移除背景色 | 設定為透明或移除 background-color |
+
+### 3.4 Page Title 風格規格
+
+**Stripe 風格 Page Title 規格**：
+
+| 元素 | 樣式規格 |
+|------|----------|
+| 標題內容 | "Blog" |
+| 對齊方式 | 左側對齊 |
+| 字體 | Inter, -apple-system, sans-serif |
+| 字體大小 | 40px (桌面) / 32px (手機) |
+| 字體粗細 | 700 (bold) |
+| 字體顏色 | #1A1F36 |
+| 位置 | Header 下方，獨立區塊 |
+| 上方間距 | 32px |
+| 下方間距 | 24px |
+
+```tsx
+// Page Title 結構
+<PageTitleWrapper>
+  <PageTitle>Blog</PageTitle>
+</PageTitleWrapper>
+```
+
+```css
+/* PageTitle 樣式 */
+.page-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1A1F36;
+  text-align: left;
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+```
+
+### 3.5 字體系統
 
 ```
 Heading:    "Caliste", "Georgia", serif (Stripe 風格標題)
@@ -60,7 +138,7 @@ Body:       "Inter", -apple-system, sans-serif
 Code:       "Fira Code", "JetBrains Mono", monospace
 ```
 
-### 3.4 響應式斷點
+### 3.6 響應式斷點
 
 | 斷點 | 寬度 | 卡片排列 |
 |------|------|----------|
@@ -137,6 +215,55 @@ Code:       "Fira Code", "JetBrains Mono", monospace
 - 從文章 metadata 解析 Tags
 - 標籤樣式: 膠囊形 (pill)，淺紫背景 (#E0E7FF)，紫色文字 (#635BFF)
 - 標籤間距: gap: 8px
+
+### F5: Header 改造 (Stripe 極簡風)
+
+**改造目標**：將現有 styled-components Header 改為 Tailwind CSS + Stripe 極簡風格
+
+**現有問題 (src/components/layout/header.tsx)**：
+- 使用 styled-components（需改為 Tailwind）
+- 有灰色背景 #eee（需移除）
+- Logo 在左側（需移除）
+- 導航靠右對齊（需改為左側對齊）
+
+**Stripe 風格 Header 實作**：
+
+```tsx
+// 使用 Tailwind CSS 的 Header 實作
+export default function Header() {
+  return (
+    <header className="w-full">
+      {/* 底部分割線 */}
+      <div className="border-b border-[#E3E8EE]"></div>
+      
+      {/* 導航容器 */}
+      <div className="max-w-[1200px] mx-auto px-6 h-14 flex items-center">
+        {/* 導航連結 - 左側對齊 */}
+        <nav className="flex gap-6">
+          <Link href="/" className="text-sm text-[#697386] hover:text-[#1A1F36] transition-colors">
+            Home
+          </Link>
+          <Link href="/blog" className="text-sm text-[#697386] hover:text-[#1A1F36] transition-colors">
+            Blog
+          </Link>
+          <Link href="/portfolio" className="text-sm text-[#697386] hover:text-[#1A1F36] transition-colors">
+            Portfolio
+          </Link>
+        </nav>
+      </div>
+    </header>
+  )
+}
+```
+
+**改造清單**：
+- [ ] 移除 styled-components，改用 Tailwind CSS
+- [ ] 移除 Logo 圖片和相關程式碼
+- [ ] 移除背景色 (background-color)
+- [ ] 將導航從右側改為左側對齊
+- [ ] 加入底部分割線 (1px solid #E3E8EE)
+- [ ] 設定連結顏色為 #697386，hover 為 #1A1F36
+- [ ] 導航項目調整為：Home, Blog, Portfolio
 
 ---
 
@@ -255,6 +382,12 @@ npm install react-markdown remark-gfm rehype-pretty-code shiki
 - [ ] 響應式設計支援手機/平板/桌面
 
 ### 功能驗收
+- [ ] Header 改造 - 移除灰色背景，改為透明
+- [ ] Header 改造 - 移除 Logo 圖片
+- [ ] Header 改造 - 導航改為左側對齊
+- [ ] Header 改造 - 加入底部分割線 (#E3E8EE)
+- [ ] Header 改造 - 連結顏色 #697386，hover #1A1F36
+- [ ] Page Title "Blog" 左側對齊，大字體 (40px)，粗體
 - [ ] 卡片可點擊展開顯示 Summary + Tags
 - [ ] 展開有流暢動畫 (Headless UI Transition)
 - [ ] 文章詳情頁有乾淨的閱讀體驗

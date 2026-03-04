@@ -28,8 +28,8 @@ function Blog({ articles }: BlogProps) {
       <div className="min-h-screen bg-stripe-background">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* 頁面標題 */}
-          <h1 className="text-4xl font-heading font-bold text-stripe-primary mb-8">
-            Articles
+          <h1 className="text-[40px] sm:text-[32px] font-bold text-[#1A1F36] mt-8 mb-6 text-left">
+            Blog
           </h1>
           
           {/* 文章網格 */}
