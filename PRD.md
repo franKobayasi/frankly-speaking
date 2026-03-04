@@ -37,9 +37,9 @@
 **參考網站**: https://stripe.dev/blog
 
 截圖參考：
-- file_19: Stripe Blog 列表頁面
-- file_20: Stripe Blog 文章卡片
-- file_21: 展開顯示 Summary 和 Tags
+- ![Stripe Blog 列表](docs/images/stripe-blog-list.jpg)
+- ![Stripe Blog 卡片](docs/images/stripe-blog-card.jpg)
+- ![展開 Summary+Tags](docs/images/stripe-blog-expand.jpg)
 
 風格：
 - 卡片式佈局
