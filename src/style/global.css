@@ -34,32 +34,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1px;
 }
 
 .header-link {
-    font-family: ui-monospace, "SF Mono", "Segoe UI Mono", "Roboto Mono", monospace;
-    font-size: 13px;
-    text-transform: uppercase;
+    font-family: ui-monospace, "SF Mono", "Segoe UI Mono", "Roboto Mono", monospace !important;
+    font-size: 13px !important;
+    text-transform: uppercase !important;
     color: #697386 !important;
-    padding: 6px 10px;
-    border-radius: 2px;
-    text-decoration: none;
-    transition: background-color 0.15s ease, color 0.15s ease;
-    background-color: rgba(0, 0, 0, 0.03);
-    gap: 1px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    padding: 6px 10px !important;
+    border-radius: 2px !important;
+    text-decoration: none !important;
+    transition: all 0.15s ease !important;
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
 }
 
 .header-link:hover {
-    background-color: rgba(0, 0, 0, 0.08) !important;
-    color: #1A1F36 !important;
+    background-color: rgba(0, 0, 0, 0.12) !important;
+    color: #000000 !important;
 }
 
 .header-link.active {
-    background-color: rgba(0, 0, 0, 0.08) !important;
-    color: #1A1F36 !important;
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
     font-weight: 600;
 }
 
