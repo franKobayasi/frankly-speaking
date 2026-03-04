@@ -45,23 +45,32 @@
     padding: 6px 10px !important;
     border-radius: 2px !important;
     text-decoration: none !important;
-    transition: all 0.15s ease !important;
-    background-color: rgba(0, 0, 0, 0.06) !important;
+    background-color: rgba(241, 249, 241, 0.5) !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     margin: 0 !important;
+    transition: color 0.15s ease !important;
+}
+
+/* Hover animation: RGB 241,249,241 → 249,249,241 → 249,241,241 → 249,241,249 → loop */
+@keyframes header-hover-r {
+    0% { background-color: rgba(241, 249, 241, 0.5); }
+    25% { background-color: rgba(249, 249, 241, 0.5); }
+    50% { background-color: rgba(249, 241, 241, 0.5); }
+    75% { background-color: rgba(249, 241, 249, 0.5); }
+    100% { background-color: rgba(241, 249, 241, 0.5); }
 }
 
 .header-link:hover {
-    background-color: rgba(0, 0, 0, 0.12) !important;
-    color: #000000 !important;
+    animation: header-hover-r 0.5s ease-in-out infinite !important;
+    color: #1A1F36 !important;
 }
 
 .header-link.active {
-    background-color: #000000 !important;
-    color: #FFFFFF !important;
-    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    color: #1A1F36 !important;
+    font-weight: 600 !important;
 }
 
 .box-100vw {
