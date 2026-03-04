@@ -17,26 +17,20 @@ const navConfig = [
 
 export default function Header() {
     return (
-        <header className="w-full">
-            {/* 底部分割線 */}
-            <div className="border-b border-[#E3E8EE]"></div>
-            
-            {/* 導航容器 */}
-            <div className="max-w-[1200px] mx-auto px-6 h-14 flex items-center">
-                {/* 導航連結 - 左側對齊 */}
-                <nav className="flex gap-6">
+        <header className="header-stripe">
+            <nav className="header-nav">
+                <div className="flex gap-[2px]">
                     {navConfig.map((nav) => (
                         <Link 
                             href={nav.pathName}
                             key={nav.pathName}
+                            className="header-link"
                         >
-                            <a className="text-sm text-[#697386] hover:text-[#1A1F36] transition-colors">
-                                {nav.title}
-                            </a>
+                            {nav.title}
                         </Link>
                     ))}
-                </nav>
-            </div>
+                </div>
+            </nav>
         </header>
     )
 }
