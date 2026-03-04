@@ -3,7 +3,7 @@ import { GetServerSideProps } from 'next'
 import Head from 'next/head'
 import Header from '../../components/Header'
 import Sidebar from '../../components/Sidebar'
-import ArticleList from '../../components/articleList'
+import ArticleList from '../../components/ArticleList'
 import { posts, filterPostsByTags } from '../../data/posts'
 
 interface BlogPageProps {
