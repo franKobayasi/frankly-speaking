@@ -1,13 +1,15 @@
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
+const path = require('path')
 
 module.exports = function (phase, { defaultConfig }) {
-  // phase is the current context in which the configuration is loaded
-  // https://github.com/vercel/next.js/blob/canary/packages/next/next-server/lib/constants.ts#L1-L4
-  // all available config, check official doc as below url
-  // https://github.com/vercel/next.js/blob/canary/packages/next/next-server/server/config.ts
-  
-  const common = {}
-  common.rewrites = async function rewrites () {
+  const common = {
+    // GitHub Pages requires trailing slashes
+    trailingSlash: true,
+    // Output directory for static export
+    distDir: 'out',
+  }
+
+  common.rewrites = async function rewrites() {
     return [
       {
         source: '/home',
@@ -15,16 +17,22 @@ module.exports = function (phase, { defaultConfig }) {
       }
     ]
   }
-  
+
   if (phase === PHASE_DEVELOPMENT_SERVER) {
-    // DEV mode config
-    return {
-      ...common
-    }
+    return { ...common }
   } else {
-    // PROD mode config
     return {
-      ...common
+      ...common,
+      // GitHub Pages works better without server-side features
+      webpack: (config) => {
+        config.resolve.fallback = {
+          ...config.resolve.fallback,
+          fs: false,
+          net: false,
+          tls: false,
+        }
+        return config
+      },
     }
   }
 }
