@@ -1,16 +1,25 @@
-import Link from 'next/link'
-import styled from "styled-components"
+import { Post } from '../data/posts'
+import ArticleCard from './ArticleCard'
 
-export default function ArticleList(props: IArticleListProps) {
-    return <ul>
-        {props.articleFiles.map((filename,index) => {
-        return <li key={`${filename}-${index}`}>
-            <Link href={`/blog/${filename}`}>{filename}</Link>
-        </li>
-        })}
-    </ul>
+interface ArticleListProps {
+  posts: Post[]
 }
 
-interface IArticleListProps {
-    articleFiles: string[]
+export default function ArticleList({ posts }: ArticleListProps) {
+  if (posts.length === 0) {
+    return (
+      <div className="no-posts-message">
+        <p>No articles found matching your filters.</p>
+        <p className="mt-2">Try selecting different tags or clear all filters.</p>
+      </div>
+    )
+  }
+
+  return (
+    <div>
+      {posts.map((post) => (
+        <ArticleCard key={post.id} post={post} />
+      ))}
+    </div>
+  )
 }
