@@ -5,6 +5,8 @@ module.exports = function (phase, { defaultConfig }) {
   const config = {
     // Static export for GitHub Pages
     output: 'export',
+    // Explicitly disable SWC to avoid binary download issues on CI
+    swcMinify: false,
     // GitHub Pages requires trailing slashes
     trailingSlash: true,
     // Output directory
