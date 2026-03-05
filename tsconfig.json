@@ -20,9 +20,15 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-        "@src/*": ["./src/*"]
+      "@src/*": [
+        "./src/*"
+      ]
     },
-    "typeRoots": [ "./src/types", "./node_modules/@types"]
+    "typeRoots": [
+      "./src/types",
+      "./node_modules/@types"
+    ],
+    "incremental": true
   },
   "ts-node": {
     "fs": "empty"

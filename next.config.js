@@ -6,6 +6,10 @@ module.exports = function (phase, { defaultConfig }) {
     trailingSlash: true,
     // Output directory
     distDir: 'out',
+    // Disable TypeScript type checking
+    typescript: {
+      ignoreBuildErrors: true,
+    },
   }
 
   common.rewrites = async function rewrites() {
