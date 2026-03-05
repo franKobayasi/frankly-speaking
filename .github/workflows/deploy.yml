@@ -25,6 +25,9 @@ jobs:
         with:
           node-version: 22
 
+      - name: Configure npm
+        run: npm config set fetch-timeout 300000
+
       - name: Show Node version
         run: node -v
 
