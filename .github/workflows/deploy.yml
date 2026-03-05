@@ -25,11 +25,22 @@ jobs:
         with:
           node-version: 22
 
+      - name: Show Node version
+        run: node -v
+
+      - name: Show npm version
+        run: npm -v
+
       - name: Install dependencies
-        run: npm ci
+        run: npm ci || npm install
 
       - name: Build
         run: npm run build
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
+
+      - name: Show output directory
+        run: ls -la out/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
