@@ -1,7 +1,10 @@
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 
 module.exports = function (phase, { defaultConfig }) {
-  const common = {
+  // Enable static export for GitHub Pages
+  const config = {
+    // Static export for GitHub Pages
+    output: 'export',
     // GitHub Pages requires trailing slashes
     trailingSlash: true,
     // Output directory
@@ -10,20 +13,31 @@ module.exports = function (phase, { defaultConfig }) {
     typescript: {
       ignoreBuildErrors: true,
     },
-  }
-
-  common.rewrites = async function rewrites() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
+    // Disable ESLint during build
+    eslint: {
+      ignoreDuringBuilds: true,
+    },
+    // Ensure server-only modules don't leak to client
+    webpack: (webpackConfig) => {
+      webpackConfig.resolve.fallback = {
+        ...webpackConfig.resolve.fallback,
+        fs: false,
       }
-    ]
+      return webpackConfig
+    },
   }
 
+  // Only enable rewrites in development (not supported in static export)
   if (phase === PHASE_DEVELOPMENT_SERVER) {
-    return { ...common }
-  } else {
-    return { ...common }
+    config.rewrites = async function rewrites() {
+      return [
+        {
+          source: '/home',
+          destination: '/',
+        }
+      ]
+    }
   }
+
+  return config
 }

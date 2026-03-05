@@ -1,20 +1,23 @@
-import { GetServerSideProps } from 'next'
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import ArticleList from '../components/ArticleList'
-import { posts, filterPostsByTags } from '../data/posts'
+import { getAllPosts, filterPostsByTags, allTags } from '../lib/posts'
 import { useState, useEffect } from 'react'
 
 interface HomePageProps {
+  posts: any[]
+  allTags: string[]
   darkMode: boolean
   toggleDarkMode: () => void
 }
 
-export default function HomePage({ darkMode, toggleDarkMode }: HomePageProps) {
+export default function HomePage({ posts: initialPosts, allTags: tags, darkMode, toggleDarkMode }: HomePageProps) {
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
+  const [posts, setPosts] = useState(initialPosts)
 
   useEffect(() => {
     setMounted(true)
@@ -25,7 +28,9 @@ export default function HomePage({ darkMode, toggleDarkMode }: HomePageProps) {
     }
   }, [])
 
-  const filteredPosts = filterPostsByTags(selectedTags)
+  useEffect(() => {
+    setPosts(filterPostsByTags(selectedTags))
+  }, [selectedTags])
 
   const handleTagToggle = (tag: string) => {
     setSelectedTags(prev => {
@@ -77,6 +82,7 @@ export default function HomePage({ darkMode, toggleDarkMode }: HomePageProps) {
         selectedTags={selectedTags}
         onTagToggle={handleTagToggle}
         onClearAll={handleClearAll}
+        allTags={tags}
         isOpen={sidebarOpen}
         onClose={() => setSidebarOpen(false)}
       />
@@ -85,16 +91,20 @@ export default function HomePage({ darkMode, toggleDarkMode }: HomePageProps) {
         <h1 className="text-2xl font-bold mb-6 text-text-primary dark:text-text-dark-primary">
           All Posts
         </h1>
-        <ArticleList posts={filteredPosts} />
+        <ArticleList posts={posts} />
       </main>
     </>
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = getAllPosts()
+  const tags = allTags
+
   return {
     props: {
-      posts: posts
-    }
+      posts,
+      allTags: tags,
+    },
   }
 }

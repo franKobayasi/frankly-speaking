@@ -1,24 +1,26 @@
 import { useState, useEffect } from 'react'
-import { GetServerSideProps } from 'next'
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Header from '../../components/Header'
 import Sidebar from '../../components/Sidebar'
 import ArticleList from '../../components/ArticleList'
-import { posts, filterPostsByTags } from '../../data/posts'
+import { getAllPosts, filterPostsByTags, allTags } from '../../lib/posts'
 
 interface BlogPageProps {
+  posts: any[]
+  allTags: string[]
   darkMode: boolean
   toggleDarkMode: () => void
 }
 
-export default function BlogPage({ darkMode, toggleDarkMode }: BlogPageProps) {
+export default function BlogPage({ posts: initialPosts, allTags: tags, darkMode, toggleDarkMode }: BlogPageProps) {
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
+  const [posts, setPosts] = useState(initialPosts)
 
   useEffect(() => {
     setMounted(true)
-    // Read tags from URL query params
     const params = new URLSearchParams(window.location.search)
     const tags = params.get('tags')
     if (tags) {
@@ -26,7 +28,9 @@ export default function BlogPage({ darkMode, toggleDarkMode }: BlogPageProps) {
     }
   }, [])
 
-  const filteredPosts = filterPostsByTags(selectedTags)
+  useEffect(() => {
+    setPosts(filterPostsByTags(selectedTags))
+  }, [selectedTags])
 
   const handleTagToggle = (tag: string) => {
     setSelectedTags(prev => {
@@ -34,7 +38,6 @@ export default function BlogPage({ darkMode, toggleDarkMode }: BlogPageProps) {
         ? prev.filter(t => t !== tag)
         : [...prev, tag]
       
-      // Update URL
       const url = new URL(window.location.href)
       if (newTags.length > 0) {
         url.searchParams.set('tags', newTags.join(','))
@@ -79,6 +82,7 @@ export default function BlogPage({ darkMode, toggleDarkMode }: BlogPageProps) {
         selectedTags={selectedTags}
         onTagToggle={handleTagToggle}
         onClearAll={handleClearAll}
+        allTags={tags}
         isOpen={sidebarOpen}
         onClose={() => setSidebarOpen(false)}
       />
@@ -87,16 +91,20 @@ export default function BlogPage({ darkMode, toggleDarkMode }: BlogPageProps) {
         <h1 className="text-2xl font-bold mb-6 text-text-primary dark:text-text-dark-primary">
           All Posts
         </h1>
-        <ArticleList posts={filteredPosts} />
+        <ArticleList posts={posts} />
       </main>
     </>
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = getAllPosts()
+  const tags = allTags
+
   return {
     props: {
-      posts: posts
-    }
+      posts,
+      allTags: tags,
+    },
   }
 }

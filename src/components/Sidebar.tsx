@@ -1,14 +1,13 @@
-import { allTags } from '../data/posts'
-
 interface SidebarProps {
   selectedTags: string[]
   onTagToggle: (tag: string) => void
   onClearAll: () => void
+  allTags: string[]
   isOpen?: boolean
   onClose?: () => void
 }
 
-export default function Sidebar({ selectedTags, onTagToggle, onClearAll, isOpen, onClose }: SidebarProps) {
+export default function Sidebar({ selectedTags, onTagToggle, onClearAll, allTags, isOpen, onClose }: SidebarProps) {
   return (
     <>
       {/* Overlay for mobile */}

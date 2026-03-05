@@ -1,8 +1,8 @@
-import { GetServerSideProps } from 'next'
+import { GetStaticProps, GetStaticPaths } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import Header from '../../components/Header'
-import { getPostBySlug, posts } from '../../data/posts'
+import { getAllPosts, getPostBySlug, markdownToHtml } from '../../lib/posts'
 
 interface ArticlePageProps {
   post: {
@@ -178,14 +178,33 @@ export default function ArticlePage({ post, darkMode, toggleDarkMode }: ArticleP
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+export const getStaticPaths: GetStaticPaths = async () => {
+  const posts = getAllPosts()
+  const slugs = posts.map((post) => post.slug)
+
+  return {
+    paths: slugs.map((slug) => ({
+      params: { slug },
+    })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string
   const post = getPostBySlug(slug)
 
+  if (!post) {
+    return {
+      props: {
+        post: null,
+      },
+    }
+  }
+
   return {
     props: {
-      post: post || null,
-      posts: posts
-    }
+      post: post,
+    },
   }
 }
