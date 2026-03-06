@@ -12,13 +12,23 @@ export interface ArticleMetadata {
 
 /**
  * 解析文章內容中的 metadata
- * 格式:
+ * 支援兩種格式:
+ * 格式 1 (inline):
  * # 標題
  * > **Summary：** 摘要內容
  * > Author：作者
  * > Date：2020/5/29
  * > Category：分類
  * > Tags：tag1, tag2, tag3
+ * 
+ * 格式 2 (multiline - 目前文章的格式):
+ * # 標題
+ * > **Summary：**
+ * > Author：Frank Lin
+ * > Email: xxx
+ * > Status：編輯中
+ * > Description:
+ * > 本文是摘要內容...
  */
 export function parseArticleMetadata(content: string): ArticleMetadata {
   const lines = content.split('\n');
@@ -30,7 +40,7 @@ export function parseArticleMetadata(content: string): ArticleMetadata {
   let tags: string[] = [];
   let category: string | null = null;
   
-  let inSummary = false;
+  let inDescription = false;
   
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
@@ -42,23 +52,45 @@ export function parseArticleMetadata(content: string): ArticleMetadata {
       continue;
     }
     
-    // 解析 Summary (> **Summary：** xxx)
-    if (trimmedLine.includes('**Summary：**') || trimmedLine.includes('**Summary：**')) {
-      inSummary = true;
-      const summaryMatch = trimmedLine.match(/\*\*Summary：[：**](.*)/);
-      if (summaryMatch) {
-        summary = summaryMatch[1].trim();
+    // 跳過空行
+    if (!trimmedLine) continue;
+    
+    // 解析 Summary (> **Summary：** xxx) - inline format
+    if (trimmedLine.includes('**Summary')) {
+      // 移除前綴，看是否有實際內容
+      const cleaned = trimmedLine.replace(/^>\s*\*\*Summary[：:]\s*/, '');
+      // 如果清理後是空的或是只有 **，表示沒有 inline content
+      if (cleaned && !cleaned.startsWith('*')) {
+        summary = cleaned.trim();
+        continue;
+      }
+      // 沒 inline content，檢查後續行是否有 Description
+      for (let j = i + 1; j < Math.min(i + 5, lines.length); j++) {
+        const nextLine = lines[j].trim();
+        if (nextLine.startsWith('> Description:') || nextLine.startsWith('> Description：')) {
+          inDescription = true;
+          // 設為 j，这样 for 循环的 i++ 会跳到 j+1
+          i = j;
+          break;
+        }
+        // 如果遇到非 metadata 行，結束搜尋
+        if (nextLine && !nextLine.startsWith('>')) break;
       }
       continue;
     }
     
-    // 在 Summary 區塊內 (多行)
-    if (inSummary && trimmedLine.startsWith('>') && !trimmedLine.includes('**')) {
-      const summaryContent = trimmedLine.substring(1).trim();
-      if (summaryContent && !summaryContent.includes('：') && !summaryContent.includes(':')) {
-        summary += ' ' + summaryContent;
+    // 處理 Description 後的內容 (這是實際的摘要)
+    if (inDescription && trimmedLine.startsWith('>')) {
+      const descContent = trimmedLine.substring(1).trim();
+      // 如果是 > 開頭但不是關鍵字，視為摘要內容
+      if (descContent && !descContent.includes('：') && !descContent.includes(':') && !descContent.match(/^(Author|Date|Tags|Category|Status|Email)/)) {
+        summary += (summary ? ' ' : '') + descContent;
+        continue;
+      } else if (descContent && descContent.match(/^(Author|Date|Tags|Category|Status|Email)/)) {
+        // 遇到下一個關鍵字，結束 Description 區塊
+        inDescription = false;
       } else {
-        inSummary = false;
+        inDescription = false;
       }
     }
     
@@ -99,9 +131,9 @@ export function parseArticleMetadata(content: string): ArticleMetadata {
       continue;
     }
     
-    // 遇到非 > 開頭的行，結束 metadata 解析
-    if (trimmedLine && !trimmedLine.startsWith('>') && !trimmedLine.startsWith('#')) {
-      break;
+    // 遇到非 > 開頭的行，結束 metadata 解析 (但如果還在收集 summary 繼續)
+    if (!trimmedLine.startsWith('>') && !trimmedLine.startsWith('#')) {
+      if (!inDescription) break;
     }
   }
   

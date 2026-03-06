@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
+import { parseArticleMetadata } from '../utils/metadata'
 
 const postsDirectory = path.join(process.cwd(), 'src/articles')
 
@@ -31,12 +32,33 @@ export function getAllPosts(): Post[] {
       const fileContents = fs.readFileSync(fullPath, 'utf8')
       const { data, content } = matter(fileContents)
 
+      // 嘗試從 frontmatter 取得 metadata
+      let metadata = {
+        title: data.title || '',
+        date: data.date || '',
+        tags: data.tags || [] as string[],
+        summary: data.summary || '',
+        author: data.author || '',
+      }
+
+      // 如果 frontmatter 沒有完整資訊，嘗試從內文解析
+      if (!metadata.title || !metadata.date || metadata.tags.length === 0) {
+        const bodyMetadata = parseArticleMetadata(content)
+        metadata = {
+          title: metadata.title || bodyMetadata.title,
+          date: metadata.date || bodyMetadata.date,
+          tags: metadata.tags.length > 0 ? metadata.tags : bodyMetadata.tags,
+          summary: metadata.summary || bodyMetadata.summary,
+          author: metadata.author || bodyMetadata.author,
+        }
+      }
+
       return {
         id: slug,
-        title: data.title || 'Untitled',
-        date: data.date || new Date().toISOString().split('T')[0],
-        tags: data.tags || [],
-        summary: data.summary || '',
+        title: metadata.title || 'Untitled',
+        date: metadata.date || new Date().toISOString().split('T')[0],
+        tags: metadata.tags || [],
+        summary: metadata.summary || '',
         content: content,
         slug: slug,
       }
@@ -62,12 +84,33 @@ export function getPostBySlug(slug: string): Post | null {
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
+  // 嘗試從 frontmatter 取得 metadata
+  let metadata = {
+    title: data.title || '',
+    date: data.date || '',
+    tags: data.tags || [] as string[],
+    summary: data.summary || '',
+    author: data.author || '',
+  }
+
+  // 如果 frontmatter 沒有完整資訊，嘗試從內文解析
+  if (!metadata.title || !metadata.date || metadata.tags.length === 0) {
+    const bodyMetadata = parseArticleMetadata(content)
+    metadata = {
+      title: metadata.title || bodyMetadata.title,
+      date: metadata.date || bodyMetadata.date,
+      tags: metadata.tags.length > 0 ? metadata.tags : bodyMetadata.tags,
+      summary: metadata.summary || bodyMetadata.summary,
+      author: metadata.author || bodyMetadata.author,
+    }
+  }
+
   return {
     id: slug,
-    title: data.title || 'Untitled',
-    date: data.date || new Date().toISOString().split('T')[0],
-    tags: data.tags || [],
-    summary: data.summary || '',
+    title: metadata.title || 'Untitled',
+    date: metadata.date || new Date().toISOString().split('T')[0],
+    tags: metadata.tags || [],
+    summary: metadata.summary || '',
     content: content,
     slug: slug,
   }
