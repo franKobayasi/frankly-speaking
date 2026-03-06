@@ -19,6 +19,10 @@ module.exports = function (phase, { defaultConfig }) {
     eslint: {
       ignoreDuringBuilds: true,
     },
+    // Required for next/image with static export
+    images: {
+      unoptimized: true,
+    },
     // Ensure server-only modules don't leak to client
     webpack: (webpackConfig) => {
       webpackConfig.resolve.fallback = {

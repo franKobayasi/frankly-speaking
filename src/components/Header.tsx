@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 interface HeaderProps {
@@ -39,7 +40,15 @@ export default function Header({ darkMode, toggleDarkMode, onMenuToggle }: Heade
         </button>
 
         {/* Logo */}
-        <Link href="/" className="header-logo">Blog</Link>
+        <Link href="/">
+          <Image
+            src="/images/website_logo_frank_signature.png"
+            alt="Frank's signature logo"
+            width={140}
+            height={56}
+            style={{ objectFit: 'contain', transform: 'scale(2)', transformOrigin: 'left center' }}
+          />
+        </Link>
 
         {/* Navigation */}
         <nav className="flex items-center gap-2">

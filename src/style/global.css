@@ -41,7 +41,7 @@
 }
 
 .header-nav {
-  @apply max-w-[1200px] mx-auto flex justify-between items-center h-full;
+  @apply w-full flex justify-between items-center h-full;
 }
 
 .header-logo {
