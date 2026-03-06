@@ -23,23 +23,28 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 18
+          cache: 'npm'
 
       - name: Install dependencies
-        run: |
-          npm install --verbose 2>&1 | tail -50
+        run: npm ci
 
       - name: Build
-        run: |
-          echo "=== Starting build ==="
-          npm run build 2>&1
-          echo "=== Build complete ==="
+        run: npm run build
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
 
-      - name: Show output
-        run: ls -la out/
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: build-output
+          path: out/
+          retention-days: 7
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
+        if: success()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
