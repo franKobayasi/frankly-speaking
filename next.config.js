@@ -5,6 +5,9 @@ module.exports = function (phase, { defaultConfig }) {
   const config = {
     // Static export for GitHub Pages
     output: 'export',
+    // Required for GitHub Pages project site (not username.github.io)
+    basePath: '/frankly-speaking',
+    assetPrefix: '/frankly-speaking/',
     // Explicitly disable SWC to avoid binary download issues on CI
     swcMinify: false,
     // GitHub Pages requires trailing slashes
