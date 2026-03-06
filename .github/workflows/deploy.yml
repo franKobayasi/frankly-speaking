@@ -25,14 +25,14 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install Yarn
-        run: npm install -g yarn
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
 
       - name: Build
-        run: yarn build
+        run: pnpm build
         env:
           NODE_OPTIONS: --openssl-legacy-provider
 
