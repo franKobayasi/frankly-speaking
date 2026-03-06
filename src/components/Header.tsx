@@ -27,17 +27,6 @@ export default function Header({ darkMode, toggleDarkMode, onMenuToggle }: Heade
   return (
     <header className="header-stripe">
       <div className="header-nav">
-        {/* Mobile Menu Button */}
-        <button 
-          className="mobile-menu-btn md:hidden" 
-          onClick={onMenuToggle}
-          aria-label="Toggle menu"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-text-primary dark:text-text-dark-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-
         {/* Logo */}
         <Link href="/" style={{ textDecoration: 'none' }}>
           <span style={{ fontSize: '1.25rem', fontWeight: 600, fontFamily: 'Georgia, serif', color: 'inherit' }}>
