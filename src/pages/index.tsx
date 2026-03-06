@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import ArticleList from '../components/ArticleList'
-import { getAllPosts, filterPostsByTags, allTags } from '../lib/posts'
+import { getAllPosts, allTags } from '../lib/posts'
 import { useState, useEffect } from 'react'
 
 interface HomePageProps {
@@ -29,7 +29,11 @@ export default function HomePage({ posts: initialPosts, allTags: tags, darkMode,
   }, [])
 
   useEffect(() => {
-    setPosts(filterPostsByTags(selectedTags))
+    if (selectedTags.length === 0) {
+      setPosts(initialPosts)
+    } else {
+      setPosts(initialPosts.filter((post: any) => selectedTags.some(tag => post.tags.includes(tag))))
+    }
   }, [selectedTags])
 
   const handleTagToggle = (tag: string) => {

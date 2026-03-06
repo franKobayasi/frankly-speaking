@@ -39,17 +39,13 @@ export default function Header({ darkMode, toggleDarkMode, onMenuToggle }: Heade
         </button>
 
         {/* Logo */}
-        <Link href="/">
-          <a className="header-logo">Blog</a>
-        </Link>
+        <Link href="/" className="header-logo">Blog</Link>
 
         {/* Navigation */}
         <nav className="flex items-center gap-2">
           {navItems.map((item) => (
-            <Link key={item.path} href={item.path}>
-              <a className={`header-link ${isActive(item.path) ? 'active' : ''}`}>
-                {item.title}
-              </a>
+            <Link key={item.path} href={item.path} className={`header-link ${isActive(item.path) ? 'active' : ''}`}>
+              {item.title}
             </Link>
           ))}
           

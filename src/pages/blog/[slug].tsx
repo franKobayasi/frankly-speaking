@@ -29,9 +29,7 @@ export default function ArticlePage({ post, darkMode, toggleDarkMode }: ArticleP
         <main className="main-content">
           <div className="text-center py-12">
             <h1 className="text-2xl font-bold mb-4">Post Not Found</h1>
-            <Link href="/blog">
-              <a className="text-accent hover:underline">← Back to Blog</a>
-            </Link>
+            <Link href="/blog" className="text-accent hover:underline">← Back to Blog</Link>
           </div>
         </main>
       </>
@@ -153,9 +151,7 @@ export default function ArticlePage({ post, darkMode, toggleDarkMode }: ArticleP
 
       <main className="main-content">
         <article className="article-detail">
-          <Link href="/blog">
-            <a className="back-link">← Back to Blog</a>
-          </Link>
+          <Link href="/blog" className="back-link">← Back to Blog</Link>
 
           <header className="article-detail-header">
             <h1 className="article-detail-title">{post.title}</h1>

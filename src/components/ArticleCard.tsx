@@ -36,10 +36,8 @@ export default function ArticleCard({ post }: ArticleCardProps) {
         </svg>
       </div>
       
-      <Link href={`/blog/${post.slug}`}>
-        <a className="article-title hover:underline" onClick={(e) => e.stopPropagation()}>
-          {post.title}
-        </a>
+      <Link href={`/blog/${post.slug}`} className="article-title hover:underline" onClick={(e) => e.stopPropagation()}>
+        {post.title}
       </Link>
 
       <div 
