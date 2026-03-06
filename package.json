@@ -15,6 +15,7 @@
   "dependencies": {
     "@babel/runtime": "^7.28.6",
     "@headlessui/react": "^1.7.18",
+    "@next/swc-darwin-arm64": "^16.1.6",
     "gray-matter": "^4.0.3",
     "next": "^14.2.35",
     "react": "^18.3.1",
