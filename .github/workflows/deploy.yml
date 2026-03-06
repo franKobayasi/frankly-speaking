@@ -25,22 +25,15 @@ jobs:
         with:
           node-version: 20
 
-      - name: Configure npm
-        run: |
-          npm config set fetch-timeout 300000
-
-      - name: Show versions
-        run: |
-          node -v
-          npm -v
-
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install --verbose 2>&1 | tail -50
 
       - name: Build
-        run: npm run build 2>&1
-        env:
-          NODE_OPTIONS: --openssl-legacy-provider
+        run: |
+          echo "=== Starting build ==="
+          npm run build 2>&1
+          echo "=== Build complete ==="
 
       - name: Show output
         run: ls -la out/
