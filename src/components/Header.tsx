@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 interface HeaderProps {
@@ -40,14 +39,10 @@ export default function Header({ darkMode, toggleDarkMode, onMenuToggle }: Heade
         </button>
 
         {/* Logo */}
-        <Link href="/">
-          <Image
-            src="/images/website_logo_frank_signature.png"
-            alt="Frank's signature logo"
-            width={140}
-            height={56}
-            style={{ objectFit: 'contain', transform: 'scale(2)', transformOrigin: 'left center' }}
-          />
+        <Link href="/" style={{ textDecoration: 'none' }}>
+          <span style={{ fontSize: '1.25rem', fontWeight: 600, fontFamily: 'Georgia, serif', color: 'inherit' }}>
+            Frankly Speaking
+          </span>
         </Link>
 
         {/* Navigation */}
