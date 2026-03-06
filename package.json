@@ -13,9 +13,10 @@
   "author": "Frank Lin",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.28.6",
     "@headlessui/react": "^1.7.18",
     "gray-matter": "^4.0.3",
-    "next": "^13.5.11",
+    "next": "^14.2.35",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-markdown": "^5.0.3",
