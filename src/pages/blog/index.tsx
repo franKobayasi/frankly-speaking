@@ -81,9 +81,7 @@ export default function BlogPage({ posts: initialPosts, allTags: tags, darkMode,
 
       <main className="main-content">
         <div className="blog-page">
-          <h1 className="text-2xl font-bold mb-6 text-text-primary dark:text-text-dark-primary">
-            All Posts
-          </h1>
+
           
           {/* Tag Filter - Always visible on page */}
         {tags && tags.length > 0 && (
