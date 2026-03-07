@@ -6,6 +6,8 @@
   body {
     @apply font-mono text-text-primary bg-background-light;
     transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
   }
   
   .dark body,
