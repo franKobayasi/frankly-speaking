@@ -59,6 +59,7 @@
 @media (max-width: 640px) {
   .logo-text {
     font-size: 0.625rem !important;
+    line-height: 0.6 !important;
   }
 }
 
