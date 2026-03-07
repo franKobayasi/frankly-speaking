@@ -49,6 +49,19 @@
   font-family: 'JetBrains Mono', monospace;
 }
 
+/* Logo Text (replaces header-logo for new design) */
+.logo-text {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+/* Mobile: 50% size, stacked */
+@media (max-width: 640px) {
+  .logo-text {
+    font-size: 0.625rem !important;
+  }
+}
+
 .dark .header-logo,
 .header-logo.dark {
   @apply text-text-dark-primary;

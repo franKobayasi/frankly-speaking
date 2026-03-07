@@ -29,8 +29,8 @@ export default function Header({ darkMode, toggleDarkMode, onMenuToggle }: Heade
       <div className="header-nav">
         {/* Logo */}
         <Link href="/" style={{ textDecoration: 'none' }}>
-          <span style={{ fontSize: '1.25rem', fontWeight: 600, fontFamily: 'JetBrains Mono, monospace', color: 'inherit' }}>
-            Frankly Speaking
+          <span className="logo-text" style={{ fontWeight: 600, fontFamily: 'JetBrains Mono, monospace', color: 'inherit', whiteSpace: 'pre-wrap' }}>
+            {'Frankly\nSpeaking'}
           </span>
         </Link>
 
