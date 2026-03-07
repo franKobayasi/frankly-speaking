@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Header from '../../components/Header'
-import Sidebar from '../../components/Sidebar'
 import ArticleList from '../../components/ArticleList'
 import { getAllPosts, allTags } from '../../lib/posts'
 
@@ -15,7 +14,6 @@ interface BlogPageProps {
 
 export default function BlogPage({ posts: initialPosts, allTags: tags, darkMode, toggleDarkMode }: BlogPageProps) {
   const [selectedTags, setSelectedTags] = useState<string[]>([])
-  const [sidebarOpen, setSidebarOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
   const [posts, setPosts] = useState(initialPosts)
 
@@ -79,22 +77,40 @@ export default function BlogPage({ posts: initialPosts, allTags: tags, darkMode,
       <Header 
         darkMode={darkMode} 
         toggleDarkMode={toggleDarkMode}
-        onMenuToggle={() => setSidebarOpen(!sidebarOpen)}
-      />
-
-      <Sidebar
-        selectedTags={selectedTags}
-        onTagToggle={handleTagToggle}
-        onClearAll={handleClearAll}
-        allTags={tags}
-        isOpen={sidebarOpen}
-        onClose={() => setSidebarOpen(false)}
       />
 
       <main className="main-content">
-        <h1 className="text-2xl font-bold mb-6 text-text-primary dark:text-text-dark-primary">
+        <h1 className="text-2xl font-bold mb-4 text-text-primary dark:text-text-dark-primary">
           All Posts
         </h1>
+        
+        {/* Tag Filter - Always visible on page */}
+        {tags && tags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-6">
+            {tags.map((tag: string) => (
+              <button
+                key={tag}
+                onClick={() => handleTagToggle(tag)}
+                className={`px-3 py-1 rounded-full text-sm transition-colors ${
+                  selectedTags.includes(tag)
+                    ? 'bg-accent text-white'
+                    : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                }`}
+              >
+                {tag}
+              </button>
+            ))}
+            {selectedTags.length > 0 && (
+              <button
+                onClick={handleClearAll}
+                className="px-3 py-1 rounded-full text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
+              >
+                Clear
+              </button>
+            )}
+          </div>
+        )}
+        
         <ArticleList posts={posts} />
       </main>
     </>
