@@ -53,11 +53,34 @@ export function getAllPosts(): Post[] {
         }
       }
 
+      // 如果仍然沒有 tags，嘗試從標題推斷
+      let finalTags = metadata.tags || []
+      if (finalTags.length === 0 && metadata.title) {
+        // 從標題關鍵字推斷 tags
+        const titleLower = metadata.title.toLowerCase()
+        if (titleLower.includes('typescript') || titleLower.includes('ts')) {
+          finalTags.push('TypeScript')
+        }
+        if (titleLower.includes('styled') || titleLower.includes('component')) {
+          finalTags.push('React')
+        }
+        if (titleLower.includes('react')) {
+          finalTags.push('React')
+        }
+        if (titleLower.includes('node') || titleLower.includes('next')) {
+          finalTags.push('Next.js')
+        }
+        // 預設標籤
+        if (finalTags.length === 0) {
+          finalTags.push('技術筆記')
+        }
+      }
+
       return {
         id: slug,
         title: metadata.title || 'Untitled',
         date: metadata.date || new Date().toISOString().split('T')[0],
-        tags: metadata.tags || [],
+        tags: finalTags,
         summary: metadata.summary || '',
         content: content,
         slug: slug,

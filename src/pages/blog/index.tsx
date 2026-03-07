@@ -80,11 +80,12 @@ export default function BlogPage({ posts: initialPosts, allTags: tags, darkMode,
       />
 
       <main className="main-content">
-        <h1 className="text-2xl font-bold mb-6 text-text-primary dark:text-text-dark-primary">
-          All Posts
-        </h1>
-        
-        {/* Tag Filter - Always visible on page */}
+        <div className="blog-page">
+          <h1 className="text-2xl font-bold mb-6 text-text-primary dark:text-text-dark-primary">
+            All Posts
+          </h1>
+          
+          {/* Tag Filter - Always visible on page */}
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-6">
             {tags.map((tag: string) => (
@@ -112,6 +113,7 @@ export default function BlogPage({ posts: initialPosts, allTags: tags, darkMode,
         )}
         
         <ArticleList posts={posts} />
+        </div>
       </main>
     </>
   )
