@@ -1,10 +1,11 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 import Header from '../components/Header'
-import Sidebar from '../components/Sidebar'
 import ArticleList from '../components/ArticleList'
 import { getAllPosts, allTags } from '../lib/posts'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 interface HomePageProps {
   posts: any[]
@@ -14,17 +15,22 @@ interface HomePageProps {
 }
 
 export default function HomePage({ posts: initialPosts, allTags: tags, darkMode, toggleDarkMode }: HomePageProps) {
+  const router = useRouter()
   const [selectedTags, setSelectedTags] = useState<string[]>([])
-  const [sidebarOpen, setSidebarOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
   const [posts, setPosts] = useState(initialPosts)
 
   useEffect(() => {
     setMounted(true)
+    // Redirect to /blog
+    router.push('/blog')
+  }, [router])
+
+  useEffect(() => {
     const params = new URLSearchParams(window.location.search)
-    const tags = params.get('tags')
-    if (tags) {
-      setSelectedTags(tags.split(','))
+    const urlTags = params.get('tags')
+    if (urlTags) {
+      setSelectedTags(urlTags.split(','))
     }
   }, [])
 
@@ -79,23 +85,39 @@ export default function HomePage({ posts: initialPosts, allTags: tags, darkMode,
       <Header 
         darkMode={darkMode} 
         toggleDarkMode={toggleDarkMode}
-        onMenuToggle={() => setSidebarOpen(!sidebarOpen)}
-      />
-
-      <Sidebar
-        selectedTags={selectedTags}
-        onTagToggle={handleTagToggle}
-        onClearAll={handleClearAll}
-        allTags={tags}
-        isOpen={sidebarOpen}
-        onClose={() => setSidebarOpen(false)}
       />
 
       <main className="main-content">
-        <h1 className="text-2xl font-bold mb-6 text-text-primary dark:text-text-dark-primary">
-          All Posts
-        </h1>
-        <ArticleList posts={posts} />
+        <div className="blog-page">
+          {/* Tag Filter */}
+          {tags && tags.length > 0 && (
+            <div className="flex flex-wrap gap-2 mb-6">
+              {tags.map((tag: string) => (
+                <button
+                  key={tag}
+                  onClick={() => handleTagToggle(tag)}
+                  className={`px-3 py-1 rounded-full text-sm transition-colors ${
+                    selectedTags.includes(tag)
+                      ? 'bg-accent text-white'
+                      : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                  }`}
+                >
+                  {tag}
+                </button>
+              ))}
+              {selectedTags.length > 0 && (
+                <button
+                  onClick={handleClearAll}
+                  className="px-3 py-1 rounded-full text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
+          )}
+          
+          <ArticleList posts={posts} />
+        </div>
       </main>
     </>
   )
