@@ -365,7 +365,7 @@
 }
 
 .about-name {
-  @apply text-[32px] font-bold text-text-primary mb-2;
+  @apply text-2xl font-bold text-text-primary mb-6;
 }
 
 .dark .about-name {

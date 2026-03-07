@@ -80,7 +80,7 @@ export default function BlogPage({ posts: initialPosts, allTags: tags, darkMode,
       />
 
       <main className="main-content">
-        <h1 className="text-2xl font-bold mb-4 text-text-primary dark:text-text-dark-primary">
+        <h1 className="text-2xl font-bold mb-6 text-text-primary dark:text-text-dark-primary">
           All Posts
         </h1>
         
