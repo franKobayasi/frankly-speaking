@@ -149,7 +149,7 @@ export default function ArticlePage({ post, darkMode, toggleDarkMode }: ArticleP
 
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
-      <main className="main-content !ml-0" style={{ maxWidth: '100%' }}>
+      <main className="main-content !ml-0 w-full" style={{ maxWidth: '100%' }}>
         <article className="article-detail">
           <Link href="/blog" className="back-link">← Back to Blog</Link>
 
