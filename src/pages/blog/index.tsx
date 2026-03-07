@@ -80,7 +80,7 @@ export default function BlogPage({ posts: initialPosts, allTags: tags, darkMode,
       />
 
       <main className="main-content">
-        <div className="blog-page">
+        <div className="blog-page" style={{ marginTop: '24px' }}>
 
           
           {/* Tag Filter - Always visible on page */}

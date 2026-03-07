@@ -88,7 +88,7 @@ export default function HomePage({ posts: initialPosts, allTags: tags, darkMode,
       />
 
       <main className="main-content">
-        <div className="blog-page">
+        <div className="blog-page" style={{ marginTop: '24px' }}>
           {/* Tag Filter */}
           {tags && tags.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-6">
