@@ -20,6 +20,10 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
         // @ts-ignore
         remarkPlugins={remarkPlugins}
         components={{
+          // 自定義粗體樣式
+          strong: ({ children }: any) => (
+            <strong className="font-bold dark:text-gray-100">{children}</strong>
+          ),
           // 自定義標題樣式
           h1: ({ children }: any) => (
             <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mt-8 mb-4">
