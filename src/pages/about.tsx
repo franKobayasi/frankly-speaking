@@ -24,7 +24,7 @@ export default function AboutPage({ darkMode, toggleDarkMode }: AboutPageProps) 
         <div className="about-page">
           <h1 className="about-name">Frank Lin</h1>
           <p className="text-lg text-text-secondary dark:text-text-dark-secondary mb-4">
-            資深前端工程師 @ 91APP
+            資深工程師
           </p>
           <p className="text-sm text-text-secondary dark:text-text-dark-secondary mb-4">
             零售 SaaS | MarTech | AdTech | 前端基礎建設
