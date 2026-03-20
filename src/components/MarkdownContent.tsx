@@ -1,10 +1,29 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
-import rehypeSlug from 'rehype-slug';
 
 interface MarkdownContentProps {
   content: string;
+}
+
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function extractText(children: React.ReactNode): string {
+  if (typeof children === 'string') return children;
+  if (typeof children === 'number') return String(children);
+  if (Array.isArray(children)) return children.map(extractText).join('');
+  if (React.isValidElement(children)) {
+    return extractText((children.props as any).children);
+  }
+  return '';
 }
 
 export default function MarkdownContent({ content }: MarkdownContentProps) {
@@ -13,6 +32,20 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
 
   // 使用 remark-gfm（支援表格）
   const remarkPlugins = [[gfm as any, {}]];
+
+  // 追蹤重複 slug，確保與 TableOfContents 的邏輯一致
+  const slugCount: Record<string, number> = {};
+  const makeId = (children: React.ReactNode): string => {
+    const text = extractText(children);
+    let id = slugify(text);
+    if (slugCount[id] !== undefined) {
+      slugCount[id]++;
+      id = `${id}-${slugCount[id]}`;
+    } else {
+      slugCount[id] = 0;
+    }
+    return id;
+  };
 
   return (
     <div className="prose prose-stripe max-w-none">
@@ -24,33 +57,35 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
           strong: ({ children }: any) => (
             <strong className="font-bold dark:text-gray-100">{children}</strong>
           ),
-          // 自定義標題樣式
+          // 自定義標題樣式（加上 id 供 TOC 跳轉）
           h1: ({ children }: any) => (
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mt-8 mb-4">
+            <h1 id={makeId(children)} className="text-3xl font-bold text-gray-900 dark:text-gray-100 mt-8 mb-4">
               {children}
             </h1>
           ),
           h2: ({ children }: any) => (
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">
+            <h2 id={makeId(children)} className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">
               {children}
             </h2>
           ),
           h3: ({ children }: any) => (
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-6 mb-3">
+            <h3 id={makeId(children)} className="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-6 mb-3">
               {children}
             </h3>
           ),
-          // 自定義連結樣式
-          a: ({ href, children }: any) => (
-            <a 
-              href={href as string} 
-              className="blue-600 dark:text-blue-300 hover:blue-600 dark:text-blue-300-hover underline"
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              {children}
-            </a>
-          ),
+          // 自定義連結樣式（anchor 連結不開新分頁）
+          a: ({ href, children }: any) => {
+            const isExternal = href && !href.startsWith('#');
+            return (
+              <a
+                href={href as string}
+                className="blue-600 dark:text-blue-300 hover:blue-600 dark:text-blue-300-hover underline"
+                {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              >
+                {children}
+              </a>
+            );
+          },
           // 自定義程式碼區塊樣式
           code: ({ className, children, ...props }: any) => {
             const match = /language-(\w+)/.exec(className || '');
