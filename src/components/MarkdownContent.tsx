@@ -125,7 +125,7 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
             </p>
           ),
           li: ({ children }: any) => (
-            <li className="text-stripe-secondary dark:text-gray-300 dark:text-gray-200">
+            <li className="text-stripe-secondary dark:text-gray-200">
               {children}
             </li>
           ),
