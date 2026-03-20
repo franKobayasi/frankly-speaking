@@ -22,17 +22,17 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
         components={{
           // 自定義標題樣式
           h1: ({ children }: any) => (
-            <h1 className="text-3xl font-heading font-bold text-stripe-primary mt-8 mb-4">
+            <h1 className="text-3xl font-heading font-bold text-stripe-primary dark:text-gray-100 mt-8 mb-4">
               {children}
             </h1>
           ),
           h2: ({ children }: any) => (
-            <h2 className="text-2xl font-heading font-semibold text-stripe-primary mt-8 mb-4">
+            <h2 className="text-2xl font-heading font-semibold text-stripe-primary dark:text-gray-100 mt-8 mb-4">
               {children}
             </h2>
           ),
           h3: ({ children }: any) => (
-            <h3 className="text-xl font-heading font-semibold text-stripe-primary mt-6 mb-3">
+            <h3 className="text-xl font-heading font-semibold text-stripe-primary dark:text-gray-100 mt-6 mb-3">
               {children}
             </h3>
           ),
@@ -40,7 +40,7 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
           a: ({ href, children }: any) => (
             <a 
               href={href as string} 
-              className="text-stripe-accent hover:text-stripe-accent-hover underline"
+              className="text-stripe-accent dark:text-blue-300 hover:text-stripe-accent dark:text-blue-300-hover underline"
               target="_blank" 
               rel="noopener noreferrer"
             >
@@ -55,7 +55,7 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
             if (isInline) {
               return (
                 <code 
-                  className="px-1.5 py-0.5 bg-stripe-hover-bg rounded text-sm font-code text-stripe-accent"
+                  className="px-1.5 py-0.5 bg-stripe-hover-bg rounded text-sm font-code text-stripe-accent dark:text-blue-300"
                   {...props}
                 >
                   {children}
@@ -110,7 +110,7 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
             </tr>
           ),
           th: ({ children }: any) => (
-            <th className="border border-stripe-border px-4 py-2 text-left font-semibold text-stripe-primary">
+            <th className="border border-stripe-border px-4 py-2 text-left font-semibold text-stripe-primary dark:text-gray-100">
               {children}
             </th>
           ),
