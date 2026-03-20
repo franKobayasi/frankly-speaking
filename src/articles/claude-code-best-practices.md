@@ -1,7 +1,7 @@
 ---
 title: Claude Code、AI Agents 與 SKILL 撰寫最佳實踐指南
 date: 2026-03-20
-author: JARVIS
+author: Frank Lin
 tags: AI, Claude Code, Agent, SKILL, Context Engineering, 最佳實踐
 summary: 本指南彙整了 Claude Code、AI Agents 與 SKILL 撰寫的最佳實踐原則
 ---
