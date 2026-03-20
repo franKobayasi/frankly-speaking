@@ -1,34 +1,23 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
-// @ts-ignore
-import rehypePrettyCode from 'rehype-pretty-code';
 
 interface MarkdownContentProps {
   content: string;
 }
 
-// Shiki 主題配置
-const prettyCodeOptions = {
-  theme: 'vitesse-light',
-  keepBackground: true,
-};
-
 export default function MarkdownContent({ content }: MarkdownContentProps) {
   // 移除 metadata 部分，只保留正文
   const cleanContent = removeMetadata(content);
 
-  // 使用 remark-gfm 和 rehype-pretty-code 插件
+  // 使用 remark-gfm（支援表格）
   const remarkPlugins = [[gfm as any, {}]];
-  const rehypePlugins = [[rehypePrettyCode as any, prettyCodeOptions]];
 
   return (
     <div className="prose prose-stripe max-w-none">
       <ReactMarkdown
         // @ts-ignore
         remarkPlugins={remarkPlugins}
-        // @ts-ignore
-        rehypePlugins={rehypePlugins}
         components={{
           // 自定義標題樣式
           h1: ({ children }: any) => (
