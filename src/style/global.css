@@ -357,6 +357,7 @@
 }
 
 .dark .article-detail-date {
+  color: #d1d5db;
   @apply text-text-dark-secondary;
 }
 
@@ -521,7 +522,7 @@
 }
 
 .dark .toc-title {
-  color: #7c8b90;
+  color: #9ca3af;
 }
 
 .toc-list {
@@ -555,7 +556,8 @@
 }
 
 .dark .toc-link {
-  color: #7c8b90;
+  color: #d1d5db;
+  color: #9ca3af;
 }
 
 .dark .toc-link:hover {
