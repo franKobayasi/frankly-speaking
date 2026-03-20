@@ -267,23 +267,27 @@
 
 /* Main Content */
 .main-content {
-  @apply ml-[240px] mt-[64px] p-6 min-h-[calc(100vh-64px)];
+  margin: 64px auto;
+  padding: 24px;
+  max-width: 900px;
+  min-height: calc(100vh - 64px);
 }
 
 @media (max-width: 1023px) {
   .main-content {
-    @apply ml-0;
+    @apply max-w-full;
+    margin-left: 0;
   }
-  
+
   .sidebar {
     transform: translateX(-100%);
     @apply fixed left-0 top-[56px] z-40 w-[280px];
   }
-  
+
   .sidebar.open {
     transform: translateX(0);
   }
-  
+
   .sidebar-overlay {
     @apply fixed inset-0 bg-black/50 z-30;
   }
@@ -331,7 +335,9 @@
 
 /* Article Detail */
 .article-detail {
-  @apply max-w-[720px] mx-auto py-8;
+  @apply py-8;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .article-detail-header {
@@ -364,7 +370,7 @@
 
 /* About Page */
 .about-page {
-  @apply max-w-[720px] mx-auto py-8;
+  @apply py-8;
 }
 
 .about-name {
@@ -401,7 +407,7 @@
 
 /* Projects Page */
 .projects-page {
-  @apply max-w-[720px] mx-auto py-8;
+  @apply py-8;
 }
 
 .project-card {
