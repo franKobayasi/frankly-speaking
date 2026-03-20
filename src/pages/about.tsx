@@ -24,7 +24,10 @@ export default function AboutPage({ darkMode, toggleDarkMode }: AboutPageProps) 
         <div className="about-page">
           <h1 className="about-name">Frank Lin</h1>
           <p className="text-lg text-text-secondary dark:text-text-dark-secondary mb-4">
-            資深前端工程師 / 全端工程師 @ 91APP
+            資深前端工程師 @ 91APP
+          </p>
+          <p className="text-sm text-text-secondary dark:text-text-dark-secondary mb-4">
+            零售 SaaS | MarTech | AdTech | 前端基礎建設
           </p>
           
           <div className="about-bio space-y-4">
@@ -66,19 +69,19 @@ export default function AboutPage({ darkMode, toggleDarkMode }: AboutPageProps) 
           {/* Skills Section */}
           <div className="mt-8">
             <h2 className="text-xl font-semibold mb-4 text-text-primary dark:text-text-dark-primary">
-              技術技能
+              技術專長
             </h2>
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">React</span>
-              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">TypeScript</span>
-              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">Node.js</span>
-              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">NestJS</span>
-              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">GCP</span>
-              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">GraphQL</span>
-              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">CubeJS</span>
-              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">Tailwind CSS</span>
-              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">AI/LLM</span>
-              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">MCP</span>
+              <span className="px-3 py-1 bg-accent/20 text-accent dark:bg-[#3b82f6]/20 dark:text-[#60a5fa] rounded-full text-sm">React</span>
+              <span className="px-3 py-1 bg-accent/20 text-accent dark:bg-[#3b82f6]/20 dark:text-[#60a5fa] rounded-full text-sm">TypeScript</span>
+              <span className="px-3 py-1 bg-accent/20 text-accent dark:bg-[#3b82f6]/20 dark:text-[#60a5fa] rounded-full text-sm">Node.js</span>
+              <span className="px-3 py-1 bg-accent/20 text-accent dark:bg-[#3b82f6]/20 dark:text-[#60a5fa] rounded-full text-sm">NestJS</span>
+              <span className="px-3 py-1 bg-accent/20 text-accent dark:bg-[#3b82f6]/20 dark:text-[#60a5fa] rounded-full text-sm">GCP</span>
+              <span className="px-3 py-1 bg-accent/20 text-accent dark:bg-[#3b82f6]/20 dark:text-[#60a5fa] rounded-full text-sm">GraphQL</span>
+              <span className="px-3 py-1 bg-accent/20 text-accent dark:bg-[#3b82f6]/20 dark:text-[#60a5fa] rounded-full text-sm">CubeJS</span>
+              <span className="px-3 py-1 bg-accent/20 text-accent dark:bg-[#3b82f6]/20 dark:text-[#60a5fa] rounded-full text-sm">Tailwind CSS</span>
+              <span className="px-3 py-1 bg-accent/20 text-accent dark:bg-[#3b82f6]/20 dark:text-[#60a5fa] rounded-full text-sm">AI/LLM</span>
+              <span className="px-3 py-1 bg-accent/20 text-accent dark:bg-[#3b82f6]/20 dark:text-[#60a5fa] rounded-full text-sm">MCP</span>
             </div>
           </div>
 
