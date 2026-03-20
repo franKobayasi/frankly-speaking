@@ -18,16 +18,17 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
   // 移除 metadata 部分，只保留正文
   const cleanContent = removeMetadata(content);
 
-  // 使用 remark-gfm 插件
-  const plugins = [[gfm as any, {}], [rehypePrettyCode as any, prettyCodeOptions]];
+  // 使用 remark-gfm 和 rehype-pretty-code 插件
+  const remarkPlugins = [[gfm as any, {}]];
+  const rehypePlugins = [[rehypePrettyCode as any, prettyCodeOptions]];
 
   return (
     <div className="prose prose-stripe max-w-none">
       <ReactMarkdown
         // @ts-ignore
-        remarkPlugins={plugins}
+        remarkPlugins={remarkPlugins}
         // @ts-ignore
-        rehypePlugins={plugins}
+        rehypePlugins={rehypePlugins}
         components={{
           // 自定義標題樣式
           h1: ({ children }: any) => (
@@ -103,13 +104,28 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
               </table>
             </div>
           ),
+          thead: ({ children }: any) => (
+            <thead className="bg-stripe-hover-bg">
+              {children}
+            </thead>
+          ),
+          tbody: ({ children }: any) => (
+            <tbody>
+              {children}
+            </tbody>
+          ),
+          tr: ({ children }: any) => (
+            <tr className="hover:bg-stripe-hover-bg transition-colors">
+              {children}
+            </tr>
+          ),
           th: ({ children }: any) => (
-            <th className="border border-stripe-border bg-stripe-hover-bg px-4 py-2 text-left font-semibold">
+            <th className="border border-stripe-border px-4 py-2 text-left font-semibold text-stripe-primary">
               {children}
             </th>
           ),
           td: ({ children }: any) => (
-            <td className="border border-stripe-border px-4 py-2">
+            <td className="border border-stripe-border px-4 py-2 text-stripe-secondary">
               {children}
             </td>
           ),
