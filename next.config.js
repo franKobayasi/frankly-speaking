@@ -1,13 +1,15 @@
-const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
+const { PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD } = require('next/constants')
 
 module.exports = function (phase, { defaultConfig }) {
+  const isProdBuild = phase === PHASE_PRODUCTION_BUILD
+
   // Enable static export for GitHub Pages
   const config = {
     // Static export for GitHub Pages
     output: 'export',
-    // Required for GitHub Pages project site (not username.github.io)
-    basePath: '/frankly-speaking',
-    assetPrefix: '/frankly-speaking/',
+    // Only apply basePath for production build (GitHub Pages)
+    basePath: isProdBuild ? '/frankly-speaking' : '',
+    assetPrefix: isProdBuild ? '/frankly-speaking/' : '',
     // Explicitly disable SWC to avoid binary download issues on CI
     swcMinify: false,
     // GitHub Pages requires trailing slashes
