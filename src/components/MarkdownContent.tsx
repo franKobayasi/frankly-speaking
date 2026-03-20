@@ -22,17 +22,17 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
         components={{
           // 自定義標題樣式
           h1: ({ children }: any) => (
-            <h1 className="text-3xl font-heading font-bold text-stripe-primary dark:text-gray-100 mt-8 mb-4">
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mt-8 mb-4">
               {children}
             </h1>
           ),
           h2: ({ children }: any) => (
-            <h2 className="text-2xl font-heading font-semibold text-stripe-primary dark:text-gray-100 mt-8 mb-4">
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">
               {children}
             </h2>
           ),
           h3: ({ children }: any) => (
-            <h3 className="text-xl font-heading font-semibold text-stripe-primary dark:text-gray-100 mt-6 mb-3">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-6 mb-3">
               {children}
             </h3>
           ),
@@ -40,7 +40,7 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
           a: ({ href, children }: any) => (
             <a 
               href={href as string} 
-              className="text-stripe-accent dark:text-blue-300 hover:text-stripe-accent dark:text-blue-300-hover underline"
+              className="blue-600 dark:text-blue-300 hover:blue-600 dark:text-blue-300-hover underline"
               target="_blank" 
               rel="noopener noreferrer"
             >
@@ -55,7 +55,7 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
             if (isInline) {
               return (
                 <code 
-                  className="px-1.5 py-0.5 bg-stripe-hover-bg rounded text-sm font-code text-stripe-accent dark:text-blue-300"
+                  className="px-1.5 py-0.5 gray-100 rounded text-sm  blue-600 dark:text-blue-300"
                   {...props}
                 >
                   {children}
@@ -71,7 +71,7 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
           },
           // 自定義區塊引用
           blockquote: ({ children }: any) => (
-            <blockquote className="border-l-4 border-stripe-accent pl-4 my-4 text-stripe-secondary dark:text-gray-300 dark:text-gray-200 italic">
+            <blockquote className="border-l-4 border-stripe-accent pl-4 my-4 text-gray-600 dark:text-gray-300 dark:text-gray-200 italic">
               {children}
             </blockquote>
           ),
@@ -89,13 +89,13 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
           // 自定義表格
           table: ({ children }: any) => (
             <div className="overflow-x-auto my-4">
-              <table className="min-w-full border border-stripe-border rounded-card">
+              <table className="min-w-full border gray-200 rounded-card">
                 {children}
               </table>
             </div>
           ),
           thead: ({ children }: any) => (
-            <thead className="bg-stripe-hover-bg">
+            <thead className="gray-100">
               {children}
             </thead>
           ),
@@ -105,27 +105,27 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
             </tbody>
           ),
           tr: ({ children }: any) => (
-            <tr className="hover:bg-stripe-hover-bg transition-colors">
+            <tr className="hover:gray-100 transition-colors">
               {children}
             </tr>
           ),
           th: ({ children }: any) => (
-            <th className="border border-stripe-border px-4 py-2 text-left font-semibold text-stripe-primary dark:text-gray-100">
+            <th className="border gray-200 px-4 py-2 text-left font-semibold text-gray-900 dark:text-gray-100">
               {children}
             </th>
           ),
           td: ({ children }: any) => (
-            <td className="border border-stripe-border px-4 py-2 text-stripe-secondary dark:text-gray-300 dark:text-gray-200">
+            <td className="border gray-200 px-4 py-2 text-gray-600 dark:text-gray-300 dark:text-gray-200">
               {children}
             </td>
           ),
           p: ({ children }: any) => (
-            <p className="my-4 text-stripe-secondary dark:text-gray-300 dark:text-gray-200">
+            <p className="my-4 text-gray-600 dark:text-gray-300 dark:text-gray-200">
               {children}
             </p>
           ),
           li: ({ children }: any) => (
-            <li className="text-stripe-secondary dark:text-gray-200">
+            <li className="text-gray-600 dark:text-gray-200">
               {children}
             </li>
           ),
