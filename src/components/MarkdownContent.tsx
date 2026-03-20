@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
+import rehypeSlug from 'rehype-slug';
 
 interface MarkdownContentProps {
   content: string;
@@ -70,7 +71,7 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
           },
           // 自定義區塊引用
           blockquote: ({ children }: any) => (
-            <blockquote className="border-l-4 border-stripe-accent pl-4 my-4 text-stripe-secondary dark:text-dark-secondary italic">
+            <blockquote className="border-l-4 border-stripe-accent pl-4 my-4 text-stripe-secondary dark:text-gray-300 italic">
               {children}
             </blockquote>
           ),
@@ -114,17 +115,17 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
             </th>
           ),
           td: ({ children }: any) => (
-            <td className="border border-stripe-border px-4 py-2 text-stripe-secondary dark:text-dark-secondary">
+            <td className="border border-stripe-border px-4 py-2 text-stripe-secondary dark:text-gray-300">
               {children}
             </td>
           ),
           p: ({ children }: any) => (
-            <p className="my-4 text-stripe-secondary dark:text-dark-secondary">
+            <p className="my-4 text-stripe-secondary dark:text-gray-300">
               {children}
             </p>
           ),
           li: ({ children }: any) => (
-            <li className="text-stripe-secondary dark:text-dark-secondary">
+            <li className="text-stripe-secondary dark:text-gray-300">
               {children}
             </li>
           ),
