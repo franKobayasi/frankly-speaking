@@ -9,31 +9,10 @@ interface ProjectsPageProps {
 const projects = [
   {
     id: '1',
-    title: 'Personal Blog',
-    description: 'A minimalist blog built with Next.js, featuring tag filtering, dark mode, and a clean typography-focused design.',
-    tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    link: 'https://github.com'
-  },
-  {
-    id: '2',
-    title: 'Task Management App',
-    description: 'A productivity application for managing daily tasks with drag-and-drop functionality and real-time sync.',
-    tags: ['React', 'Firebase', 'Redux'],
-    link: 'https://github.com'
-  },
-  {
-    id: '3',
-    title: 'Weather Dashboard',
-    description: 'A beautiful weather application showing forecasts with animated backgrounds and location-based recommendations.',
-    tags: ['Vue.js', 'OpenWeather API', 'Chart.js'],
-    link: 'https://github.com'
-  },
-  {
-    id: '4',
-    title: 'CLI Productivity Tools',
-    description: 'A collection of command-line utilities for automating common development tasks and boosting productivity.',
-    tags: ['Go', 'CLI', 'Automation'],
-    link: 'https://github.com'
+    title: 'frankly-speaking',
+    description: 'A personal blog built with Next.js 15, featuring tag filtering, dark mode, and a clean typography-focused design. The blog uses Markdown for content management and supports static site export.',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'React 19'],
+    link: 'https://github.com/franKobayasi/frankly-speaking'
   }
 ]
 
