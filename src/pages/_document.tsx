@@ -7,7 +7,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="icon" href={`${BASE_PATH}/website.ico`} type="image/x-icon" />
+        <link rel="icon" href={`${BASE_PATH}/favicon.ico`} type="image/x-icon" />
       </Head>
       <body>
         <Main />
