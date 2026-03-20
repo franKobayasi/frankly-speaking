@@ -24,30 +24,67 @@ export default function AboutPage({ darkMode, toggleDarkMode }: AboutPageProps) 
         <div className="about-page">
           <h1 className="about-name">Frank Lin</h1>
           <p className="text-lg text-text-secondary dark:text-text-dark-secondary mb-4">
-            Software Developer & Technical Writer
+            資深前端工程師 / 全端工程師 @ 91APP
           </p>
           
           <div className="about-bio space-y-4">
             <p>
-              Hi! I'm a software developer based in Taiwan with a passion for building 
-              elegant solutions to complex problems. I specialize in web development 
-              with a focus on React, TypeScript, and modern JavaScript frameworks.
+              累積 6 年零售 SaaS 前端與全端開發經驗，主要開發產品範疇涵蓋數據視覺化、MarTech/AdTech 產品。
+              同時擔任多項公司前端基礎建設的主要開發與維護人員，熟悉如何透過 AI 導入開發循環提升開發效率。
             </p>
-            <p>
-              When I'm not coding, you can find me exploring new technologies, 
-              contributing to open-source projects, or writing about my experiences 
-              in the tech industry.
-            </p>
-            <p>
-              I believe in continuous learning and sharing knowledge with the 
-              community. This blog is my way of documenting my journey and 
-              helping others who are on a similar path.
-            </p>
+          </div>
+
+          {/* Work Experience Section */}
+          <div className="mt-8">
+            <h2 className="text-xl font-semibold mb-4 text-text-primary dark:text-text-dark-primary">
+              工作經驗
+            </h2>
+            <div className="space-y-6">
+              <div className="border-l-2 border-accent pl-4">
+                <h3 className="font-medium text-text-primary dark:text-text-dark-primary">
+                  資深前端工程師 / 全端工程師
+                </h3>
+                <p className="text-sm text-text-secondary dark:text-text-dark-secondary">
+                  91APP（台灣首家上櫃零售 SaaS 公司，股票代碼：6741）
+                </p>
+                <p className="text-sm text-text-secondary dark:text-text-dark-secondary mb-2">
+                  2020.03 – 2026.03（6 年）
+                </p>
+                <ul className="list-disc list-inside text-sm text-text-secondary dark:text-text-dark-secondary space-y-1">
+                  <li>官網前台改版：AngularJS → React 遷移，確保業務無中斷</li>
+                  <li>數據視覺化：開發多張企業級報表，引進 CubeJS 將開發時程從 2-3 個月縮短至 1 週</li>
+                  <li>MarTech/個人化行銷：擴充圈選條件、實作 Email 模組、串接 LINE LON 廣告</li>
+                  <li>條件模組化：重新設計圈選引擎架構，開發效率提升一倍</li>
+                  <li>AdTech：串接 Google、DV360 廣告平台，實現自動投放與數據回傳</li>
+                  <li>基礎設施：從零建立公司 UI 元件庫（Atmos-ui）、建立 client-side log 收集方案（Agatha）、維護 Tracking SDK</li>
+                  <li>AI 輔助開發：建立 AGENT.md/SKILL.md 規範，透過 MCP 整合 Figma 與任務看板</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Skills Section */}
+          <div className="mt-8">
+            <h2 className="text-xl font-semibold mb-4 text-text-primary dark:text-text-dark-primary">
+              技術技能
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">React</span>
+              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">TypeScript</span>
+              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">Node.js</span>
+              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">NestJS</span>
+              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">GCP</span>
+              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">GraphQL</span>
+              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">CubeJS</span>
+              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">Tailwind CSS</span>
+              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">AI/LLM</span>
+              <span className="px-3 py-1 bg-accent/10 text-accent dark:bg-accent-dark/10 dark:text-accent-dark rounded-full text-sm">MCP</span>
+            </div>
           </div>
 
           <div className="social-links">
             <a 
-              href="https://github.com" 
+              href="https://github.com/franKobayasi" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="social-link"
@@ -58,18 +95,18 @@ export default function AboutPage({ darkMode, toggleDarkMode }: AboutPageProps) 
               </svg>
             </a>
             <a 
-              href="https://twitter.com" 
+              href="https://www.linkedin.com/in/frank-lin-045993235/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="social-link"
-              aria-label="Twitter"
+              aria-label="LinkedIn"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-text-primary dark:text-text-dark-primary" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
               </svg>
             </a>
             <a 
-              href="mailto:hello@example.com" 
+              href="mailto:alinktofrank@gmail.com" 
               className="social-link"
               aria-label="Email"
             >
@@ -84,8 +121,7 @@ export default function AboutPage({ darkMode, toggleDarkMode }: AboutPageProps) 
               Get in Touch
             </h2>
             <p className="text-text-secondary dark:text-text-dark-secondary">
-              Feel free to reach out for collaborations, questions, or just to say hi! 
-              I'm always open to discussing new projects and ideas.
+              歡迎聯繫合作、討論技術或交流想法！
             </p>
           </div>
         </div>
