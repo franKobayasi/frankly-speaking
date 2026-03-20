@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
-import { Post } from '../data/posts'
+import { Post } from '../lib/posts'
 
 interface ArticleCardProps {
   post: Post
@@ -25,6 +25,7 @@ export default function ArticleCard({ post }: ArticleCardProps) {
     >
       <div className="article-card-header">
         <span className="article-date">{formatDate(post.date)}</span>
+        <span className="article-date ml-2">• {post.author}</span>
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
           className={`article-expand-icon ${expanded ? 'expanded' : ''}`}

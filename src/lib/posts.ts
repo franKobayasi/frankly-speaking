@@ -11,6 +11,7 @@ export interface Post {
   id: string
   title: string
   date: string
+  author: string
   tags: string[]
   summary: string
   content: string
@@ -80,6 +81,7 @@ export function getAllPosts(): Post[] {
         id: slug,
         title: metadata.title || 'Untitled',
         date: metadata.date || new Date().toISOString().split('T')[0],
+        author: metadata.author || 'Frank',
         tags: finalTags,
         summary: metadata.summary || '',
         content: content,
@@ -132,6 +134,7 @@ export function getPostBySlug(slug: string): Post | null {
     id: slug,
     title: metadata.title || 'Untitled',
     date: metadata.date || new Date().toISOString().split('T')[0],
+    author: metadata.author || 'Frank',
     tags: metadata.tags || [],
     summary: metadata.summary || '',
     content: content,

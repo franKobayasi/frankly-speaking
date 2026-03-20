@@ -9,6 +9,7 @@ interface ArticlePageProps {
     id: string
     title: string
     date: string
+    author: string
     tags: string[]
     summary: string
     content: string
@@ -156,7 +157,7 @@ export default function ArticlePage({ post, darkMode, toggleDarkMode }: ArticleP
 
           <header className="article-detail-header">
             <h1 className="article-detail-title">{post.title}</h1>
-            <p className="article-detail-date">{formatDate(post.date)}</p>
+            <p className="article-detail-date">{formatDate(post.date)} • {post.author}</p>
             <div className="flex gap-2">
               {post.tags.map((tag) => (
                 <span key={tag} className="article-tag">

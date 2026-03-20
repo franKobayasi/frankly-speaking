@@ -1,4 +1,4 @@
-import { Post } from '../data/posts'
+import { Post } from '../lib/posts'
 import ArticleCard from './ArticleCard'
 
 interface ArticleListProps {
