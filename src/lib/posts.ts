@@ -7,6 +7,17 @@ import { parseArticleMetadata } from '../utils/metadata'
 
 const postsDirectory = path.join(process.cwd(), 'src/articles')
 
+// 確保 tags 永遠是字串陣列
+function normalizeTags(tags: unknown): string[] {
+  if (Array.isArray(tags)) {
+    return tags.map(t => String(t)).filter(t => t)
+  }
+  if (typeof tags === 'string') {
+    return tags.split(',').map(t => t.trim()).filter(t => t)
+  }
+  return []
+}
+
 export interface Post {
   id: string
   title: string
@@ -37,7 +48,7 @@ export function getAllPosts(): Post[] {
       let metadata = {
         title: data.title || '',
         date: data.date || '',
-        tags: data.tags || [] as string[],
+        tags: normalizeTags(data.tags),
         summary: data.summary || '',
         author: data.author || '',
       }
@@ -48,14 +59,14 @@ export function getAllPosts(): Post[] {
         metadata = {
           title: metadata.title || bodyMetadata.title,
           date: metadata.date || bodyMetadata.date,
-          tags: metadata.tags.length > 0 ? metadata.tags : bodyMetadata.tags,
+          tags: metadata.tags.length > 0 ? metadata.tags : normalizeTags(bodyMetadata.tags),
           summary: metadata.summary || bodyMetadata.summary,
           author: metadata.author || bodyMetadata.author,
         }
       }
 
       // 如果仍然沒有 tags，嘗試從標題推斷
-      let finalTags = metadata.tags || []
+      let finalTags = [...metadata.tags]
       if (finalTags.length === 0 && metadata.title) {
         // 從標題關鍵字推斷 tags
         const titleLower = metadata.title.toLowerCase()
@@ -80,7 +91,9 @@ export function getAllPosts(): Post[] {
       return {
         id: slug,
         title: metadata.title || 'Untitled',
-        date: metadata.date || new Date().toISOString().split('T')[0],
+        date: metadata.date instanceof Date
+          ? metadata.date.toISOString().split('T')[0]
+          : String(metadata.date || new Date().toISOString().split('T')[0]),
         author: metadata.author || 'Frank',
         tags: finalTags,
         summary: metadata.summary || '',
@@ -113,7 +126,7 @@ export function getPostBySlug(slug: string): Post | null {
   let metadata = {
     title: data.title || '',
     date: data.date || '',
-    tags: data.tags || [] as string[],
+    tags: normalizeTags(data.tags),
     summary: data.summary || '',
     author: data.author || '',
   }
@@ -124,7 +137,7 @@ export function getPostBySlug(slug: string): Post | null {
     metadata = {
       title: metadata.title || bodyMetadata.title,
       date: metadata.date || bodyMetadata.date,
-      tags: metadata.tags.length > 0 ? metadata.tags : bodyMetadata.tags,
+      tags: metadata.tags.length > 0 ? metadata.tags : normalizeTags(bodyMetadata.tags),
       summary: metadata.summary || bodyMetadata.summary,
       author: metadata.author || bodyMetadata.author,
     }
@@ -133,9 +146,11 @@ export function getPostBySlug(slug: string): Post | null {
   return {
     id: slug,
     title: metadata.title || 'Untitled',
-    date: metadata.date || new Date().toISOString().split('T')[0],
+    date: metadata.date instanceof Date
+      ? metadata.date.toISOString().split('T')[0]
+      : String(metadata.date || new Date().toISOString().split('T')[0]),
     author: metadata.author || 'Frank',
-    tags: metadata.tags || [],
+    tags: metadata.tags,
     summary: metadata.summary || '',
     content: content,
     slug: slug,
