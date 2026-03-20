@@ -1,8 +1,8 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
-  // GitHub Pages deployment path
-  const BASE_PATH = '/frankly-speaking'
+  // Use /frankly-speaking in production (GitHub Pages), empty in development
+  const BASE_PATH = process.env.NODE_ENV === 'production' ? '/frankly-speaking' : ''
 
   return (
     <Html lang="en">
