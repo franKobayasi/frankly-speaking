@@ -7,7 +7,7 @@ tags:
   - 維運
   - DevOps
   - AI Agent
-summary: 分享作者如何利用 Claude Code 打造一個 維運 維運輔助 Agent，自動調查生產環境問題，大幅提升維運效率。
+summary: 分享作者如何利用 Claude Code 打造一個維運輔助 Agent，自動調查生產環境問題，大幅提升維運效率。
 ---
 
 身為一名 Software Engineer，平時除了開發功能外，最頭痛的莫過於處理生產環境的突發狀況。每當系統出問題，維運 需要在最短時間內找到 Root Cause 並修復，但這個過程往往充滿了各種折騰：切換畫面查 Log、連線進 DB 撈資料、比對程式碼版本... 如果有一個 AI Agent 能幫我自動完成這些繁瑣的調查工作，那該有多好？
