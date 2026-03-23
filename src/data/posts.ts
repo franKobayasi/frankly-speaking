@@ -385,7 +385,7 @@ The App Router is the future of Next.js—embrace it!
     title: '以 Claude Code 為基礎的維運輔助 Agent 實作：OptiSentry',
     date: '2026-03-23',
     tags: ['Claude Code', 'SRE', 'DevOps', 'AI Agent'],
-    summary: '分享我如何用 Claude Code 打造一個 SRE 維運輔助 Agent，自動調查生產環境問題',
+    summary: '分享作者如何利用 Claude Code 打造一個 SRE 維運輔助 Agent，自動調查生產環境問題，大幅提升維運效率。',
     content: 'optisentry-claude-code-sre-agent',
     slug: 'optisentry-claude-code-sre-agent'
   }
