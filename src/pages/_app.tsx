@@ -1,6 +1,9 @@
 import type { AppProps } from 'next/app'
 import { useState, useEffect } from 'react'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import '../style/global.css'
+
+export const GA_ID = 'G-7CEYCNN49X'
 
 export default function App({ Component, pageProps }: AppProps) {
   const [darkMode, setDarkMode] = useState(false)
@@ -36,8 +39,11 @@ export default function App({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <div className={darkMode ? 'dark' : ''}>
-      <Component {...pageProps} darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-    </div>
+    <>
+      <GoogleAnalytics gaId={GA_ID} />
+      <div className={darkMode ? 'dark' : ''}>
+        <Component {...pageProps} darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      </div>
+    </>
   )
 }

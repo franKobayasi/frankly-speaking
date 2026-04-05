@@ -74,12 +74,25 @@ export default function HomePage({ posts: initialPosts, allTags: tags, darkMode,
   return (
     <>
       <Head>
-        <title>Blog | frankly-speaking</title>
+        <title>frankly-speaking</title>
         <meta name="description" content="A personal blog about technology, development, and thoughts" />
+        <meta name="keywords" content="technology, development, programming, AI, software engineering" />
         <link 
           href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" 
           rel="stylesheet" 
         />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="frankly-speaking" />
+        <meta property="og:description" content="A personal blog about technology, development, and thoughts" />
+        <meta property="og:url" content="https://franklin0407.github.io/frankly-speaking" />
+        <meta property="og:site_name" content="frankly-speaking" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="frankly-speaking" />
+        <meta name="twitter:description" content="A personal blog about technology, development, and thoughts" />
       </Head>
 
       <Header 

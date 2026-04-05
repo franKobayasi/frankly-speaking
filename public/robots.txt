@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://franklin0407.github.io/frankly-speaking
+
+# Sitemaps
+Sitemap: https://franklin0407.github.io/frankly-speaking/sitemap.xml
