@@ -102,24 +102,27 @@ export default function BlogPage({ posts: initialPosts, allTags: tags, darkMode,
           <div className="mb-6">
             <button
               onClick={() => setTagExpanded(!tagExpanded)}
-              className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors mb-3"
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium border transition-all ${
+                tagExpanded
+                  ? 'bg-accent text-white border-accent'
+                  : selectedTags.length > 0
+                  ? 'bg-accent/10 text-accent border-accent/30 dark:bg-accent/20'
+                  : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
+              }`}
             >
-              <span>🏷️ Filter by tags</span>
-              <span className={`text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-800 rounded-full`}>
-                {selectedTags.length > 0 ? `${selectedTags.length} selected` : `${tags.length} tags`}
-              </span>
-              <svg
-                className={`w-4 h-4 transition-transform ${tagExpanded ? 'rotate-180' : ''}`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
               </svg>
+              <span>Filter</span>
+              {selectedTags.length > 0 && (
+                <span className={`px-1.5 py-0.5 rounded-full text-xs ${tagExpanded ? 'bg-white/20' : 'bg-accent text-white'}`}>
+                  {selectedTags.length}
+                </span>
+              )}
             </button>
 
             {tagExpanded && (
-              <div className="flex flex-wrap gap-2">
+              <div className="mt-3 flex flex-wrap gap-2">
                 {tags.map((tag: string) => (
                   <button
                     key={tag}
@@ -136,7 +139,7 @@ export default function BlogPage({ posts: initialPosts, allTags: tags, darkMode,
                 {selectedTags.length > 0 && (
                   <button
                     onClick={handleClearAll}
-                    className="px-3 py-1 rounded-full text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 underline underline-offset-2"
+                    className="px-3 py-1 rounded-full text-sm text-accent hover:underline underline-offset-2"
                   >
                     Clear all
                   </button>
