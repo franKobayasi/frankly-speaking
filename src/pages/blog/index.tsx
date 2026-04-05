@@ -16,6 +16,7 @@ export default function BlogPage({ posts: initialPosts, allTags: tags, darkMode,
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [mounted, setMounted] = useState(false)
   const [posts, setPosts] = useState(initialPosts)
+  const [tagExpanded, setTagExpanded] = useState(false)
 
   useEffect(() => {
     setMounted(true)
@@ -96,29 +97,51 @@ export default function BlogPage({ posts: initialPosts, allTags: tags, darkMode,
         <div className="blog-page" style={{ marginTop: '24px' }}>
 
           
-          {/* Tag Filter - Always visible on page */}
+          {/* Tag Filter - Collapsible */}
         {tags && tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-6">
-            {tags.map((tag: string) => (
-              <button
-                key={tag}
-                onClick={() => handleTagToggle(tag)}
-                className={`px-3 py-1 rounded-full text-sm transition-colors ${
-                  selectedTags.includes(tag)
-                    ? 'bg-accent text-white'
-                    : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-                }`}
+          <div className="mb-6">
+            <button
+              onClick={() => setTagExpanded(!tagExpanded)}
+              className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors mb-3"
+            >
+              <span>🏷️ Filter by tags</span>
+              <span className={`text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-800 rounded-full`}>
+                {selectedTags.length > 0 ? `${selectedTags.length} selected` : `${tags.length} tags`}
+              </span>
+              <svg
+                className={`w-4 h-4 transition-transform ${tagExpanded ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
               >
-                {tag}
-              </button>
-            ))}
-            {selectedTags.length > 0 && (
-              <button
-                onClick={handleClearAll}
-                className="px-3 py-1 rounded-full text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
-              >
-                Clear
-              </button>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {tagExpanded && (
+              <div className="flex flex-wrap gap-2">
+                {tags.map((tag: string) => (
+                  <button
+                    key={tag}
+                    onClick={() => handleTagToggle(tag)}
+                    className={`px-3 py-1 rounded-full text-sm transition-colors ${
+                      selectedTags.includes(tag)
+                        ? 'bg-accent text-white'
+                        : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                    }`}
+                  >
+                    {tag}
+                  </button>
+                ))}
+                {selectedTags.length > 0 && (
+                  <button
+                    onClick={handleClearAll}
+                    className="px-3 py-1 rounded-full text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 underline underline-offset-2"
+                  >
+                    Clear all
+                  </button>
+                )}
+              </div>
             )}
           </div>
         )}
