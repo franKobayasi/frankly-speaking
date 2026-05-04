@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://franklin0407.github.io/frankly-speaking/</loc><lastmod>2026-04-18T01:32:02.068Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://franklin0407.github.io/frankly-speaking/about/</loc><lastmod>2026-04-18T01:32:02.068Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://franklin0407.github.io/frankly-speaking/blog/</loc><lastmod>2026-04-18T01:32:02.069Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://franklin0407.github.io/frankly-speaking/portfolio/</loc><lastmod>2026-04-18T01:32:02.069Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://franklin0407.github.io/frankly-speaking/projects/</loc><lastmod>2026-04-18T01:32:02.069Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-04-16-hermes-agent/</loc><lastmod>2026-04-18T01:32:02.069Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-04-11-ai-agent-revolution/</loc><lastmod>2026-04-18T01:32:02.069Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-04-09-harness-engineering/</loc><lastmod>2026-04-18T01:32:02.069Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-04-04-ai-ate-venture-capital/</loc><lastmod>2026-04-18T01:32:02.069Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-03-28-xiaomi-mimo-hunter-alpha/</loc><lastmod>2026-04-18T01:32:02.069Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-03-27-context-engineering/</loc><lastmod>2026-04-18T01:32:02.069Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://franklin0407.github.io/frankly-speaking/blog/optisentry-claude-code-sre-agent/</loc><lastmod>2026-04-18T01:32:02.069Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-03-21-model-context-protocol/</loc><lastmod>2026-04-18T01:32:02.069Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-03-21-million-token-context/</loc><lastmod>2026-04-18T01:32:02.069Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://franklin0407.github.io/frankly-speaking/blog/claude-code-best-practices/</loc><lastmod>2026-04-18T01:32:02.069Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/about/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/blog/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/portfolio/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/projects/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-05-04-deepclaude-cost-breakthrough/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-05-02-goblin-problem-ai-personality/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-04-25-open-vs-closed-ai-divide/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-04-23-model-wars/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-04-16-hermes-agent/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-04-11-ai-agent-revolution/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-04-09-harness-engineering/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-04-04-ai-ate-venture-capital/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-03-28-xiaomi-mimo-hunter-alpha/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-03-27-context-engineering/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/blog/optisentry-claude-code-sre-agent/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-03-21-model-context-protocol/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/blog/ai-trend-2026-03-21-million-token-context/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://franklin0407.github.io/frankly-speaking/blog/claude-code-best-practices/</loc><lastmod>2026-05-04T02:44:42.362Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>
