@@ -13,6 +13,13 @@ const projects = [
     description: 'A personal blog built with Next.js 15, featuring tag filtering, dark mode, and a clean typography-focused design. The blog uses Markdown for content management and supports static site export.',
     tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'React 19'],
     link: 'https://github.com/franKobayasi/frankly-speaking'
+  },
+  {
+    id: '2',
+    title: 'helix',
+    description: 'A framework for creating Autonomous Development Environments that grow with you. Provides structured development workflows with quality gates, knowledge persistence, and intelligent agent coordination.',
+    tags: ['TypeScript', 'AI Agent', 'Development Framework', 'Claude Code'],
+    link: 'https://github.com/franKobayasi/helix'
   }
 ]
 
