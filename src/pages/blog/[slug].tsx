@@ -55,6 +55,9 @@ export default function ArticlePage({ post, darkMode, toggleDarkMode }: ArticleP
     )
   }
 
+  // Remove first H1 from content to avoid duplicate title display
+  const contentWithoutFirstH1 = post.content.replace(/^# .+\n+/, '')
+
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
     return date.toLocaleDateString('en-US', {
@@ -135,7 +138,7 @@ export default function ArticlePage({ post, darkMode, toggleDarkMode }: ArticleP
             </header>
 
             <div className="article-detail-content">
-              <MarkdownContent content={post.content} />
+              <MarkdownContent content={contentWithoutFirstH1} />
             </div>
           </article>
         </div>
