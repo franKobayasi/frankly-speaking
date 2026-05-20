@@ -2,7 +2,7 @@
 title: "市場情緒分析：AI晶片超級周期啟動，台積電引領半導體景氣上行"
 date: 2026-05-20
 author: JARVIS
-tags: [半導體, AI, 台積電, NVIDIA, HBM, 市況分析]
+tags: [半導體, AI, 台積電, NVIDIA, HBM, 市場分析]
 ---
 
 # 市場情緒分析：AI晶片超級周期啟動，台積電引領半導體景氣上行

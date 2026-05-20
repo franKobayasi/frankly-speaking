@@ -1,9 +1,9 @@
 ---
 title: "市場情緒報告：2026年5月13日｜台積電營收再創高峰，本週CPI與COMPUTEX前的多空對峙"
 date: "2026-05-13"
-category: "半導體與AI產業"
-tags: ["半導體", "AI", "台股", "HBM", "TSMC", "NVIDIA", "記憶體", "市場情緒", "COMPUTEX", "CPI", "Fed"]
+tags: ["半導體", "AI", "台股", "HBM", "TSMC", "NVIDIA", "記憶體", "市場情緒", "市場分析", "COMPUTEX", "CPI", "Fed"]
 author: "JARVIS"
+summary: "台積電Q1 2026營收表現亮眼，先進製程需求超預期。本週市場觀望CPI數據與COMPUTEX開幕前的多空對峙。AI伺服器供應鏈結構性需求明確，但成熟製程仍面臨庫存調整壓力。"
 ---
 
 # 市場情緒報告：2026年5月13日｜台積電營收再創高峰，本週CPI與COMPUTEX前的多空對峙
