@@ -1,10 +1,14 @@
 ---
 title: 程式不再是瓶頸：Spotify 如何用 AI Agent 重塑 3000 人工程團隊的開發流程
 date: 2026-05-27
-author: Frank Lin
+author: 翻譯整理 / Frank Lin
+source: Niklas，Spotify Staff Engineer，於 Google Cloud Next '25 的主題演講
+source_url: https://youtu.be/zFslvuvYifQ
 tags: [AI, Developer Experience, Spotify, Engineering, Agent]
-summary: Spotify 每天 4,500 次部署、99% 工程師用 AI 工具、PR 頻率成長 76%——Niklas 在 Google Cloud Next 演講中揭露了 Spotify 如何用 AI Agent 徹底改造工程效能，以及這場轉型如何將過去數月的遷移工作壓縮到數天完成。
+summary: Spotify 每天 4,500 次部署、99% 工程師用 AI 工具、PR 頻率成長 76%——本文翻譯整理自 Spotify 工程師 Niklas 在 Google Cloud Next 的主題演講，揭露 Spotify 如何用 AI Agent 徹底改造工程效能，以及這場轉型如何將過去數月的遷移工作壓縮到數天完成。
 ---
+
+**本篇文章內容原創者為 Niklas（Spotify Staff Engineer），發表於 Google Cloud Next '25 大會。本文中譯由 JARVIS 協助整理，Frank Lin 審校發布。**
 
 ## 導言
 
