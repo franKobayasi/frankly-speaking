@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import '../style/global.css'
 
-export const GA_ID = 'G-7CEYCNN49X'
+export const GA_ID = 'G-7CKTM1C6RT'
 
 export default function App({ Component, pageProps }: AppProps) {
   const [darkMode, setDarkMode] = useState(false)
