@@ -2,3 +2,5 @@ node_modules/*
 .next/*
 .DS_Storeout/
 out/
+
+.agent/
