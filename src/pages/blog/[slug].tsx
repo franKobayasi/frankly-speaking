@@ -85,7 +85,7 @@ export default function ArticlePage({ post, darkMode, toggleDarkMode }: ArticleP
         <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.summary} />
-        <meta property="og:url" content={`https://franKobayasi.github.io/frankly-speaking/blog/${post.slug}`} />
+        <meta property="og:url" content={`https://frankobayasi.github.io/frankly-speaking/blog/${post.slug}`} />
         <meta property="og:site_name" content="frankly-speaking" />
         <meta property="article:published_time" content={post.date} />
         <meta property="article:author" content={post.author} />
@@ -111,7 +111,7 @@ export default function ArticlePage({ post, darkMode, toggleDarkMode }: ArticleP
               },
               datePublished: post.date,
               tags: post.tags,
-              url: `https://franKobayasi.github.io/frankly-speaking/blog/${post.slug}`,
+              url: `https://frankobayasi.github.io/frankly-speaking/blog/${post.slug}`,
             }),
           }}
         />
@@ -127,7 +127,7 @@ export default function ArticlePage({ post, darkMode, toggleDarkMode }: ArticleP
             <div className="flex items-center justify-between gap-4 mb-6">
               <Link href="/blog" className="back-link !mb-0">← Back to Blog</Link>
               <ShareButton
-                url={`https://franKobayasi.github.io/frankly-speaking/blog/${post.slug}`}
+                url={`https://frankobayasi.github.io/frankly-speaking/blog/${post.slug}`}
                 slug={post.slug}
                 title={post.title}
               />

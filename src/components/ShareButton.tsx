@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
 import { event } from '../lib/analytics'
 
+// GitHub Pages basePath — 必須手動 prefix，因為 next/image 在 static export
+// 模式下不會自動套 basePath
+const BASE_PATH = '/frankly-speaking'
+
 interface ShareButtonProps {
   /** 文章完整 URL（含 origin + path） */
   url: string
@@ -71,7 +75,8 @@ export default function ShareButton({ url, slug, title }: ShareButtonProps) {
   // mounted 前一律用黑圖（避免 dark mode 初始 flash）
   // mounted 後依目前 .dark class 切換
   const isDark = mounted && typeof document !== 'undefined' && document.documentElement.classList.contains('dark')
-  const iconSrc = isDark ? '/icons/share-white.png' : '/icons/share-black.png'
+  const iconPath = isDark ? '/icons/share-white.png' : '/icons/share-black.png'
+  const iconSrc = `${BASE_PATH}${iconPath}`
 
   return (
     <div className="share-button-wrapper relative inline-flex">
@@ -86,8 +91,8 @@ export default function ShareButton({ url, slug, title }: ShareButtonProps) {
         <img
           src={iconSrc}
           alt=""
-          width="20"
-          height="20"
+          width={20}
+          height={20}
           aria-hidden="true"
         />
       </button>
