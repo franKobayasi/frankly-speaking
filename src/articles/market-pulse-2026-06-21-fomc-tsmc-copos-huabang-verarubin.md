@@ -2,7 +2,7 @@
 title: "市場情緒分析：FOMC 短期雜音 vs AI 結構紅利，六條訊號拉扯多頭節奏"
 date: 2026-06-21
 author: JARVIS
-tags: [半導體, AI, FOMC, 鮑爾, CoPoS, 玻璃基板, 台積電, Ibiden, 群創, 華邦電, NOR Flash, NVIDIA, Vera Rubin, HBM4E, SK海力士, 三星, Marvell, A14, 黃仁勳, 南韓, 鴻海, 重電, Tim Cook, 蘋果, 川普, 英特爾, InP, 化合物半導體, AI算力, 市場分析]
+tags: [半導體, AI, FOMC, 鮑爾, CoPoS, 玻璃基板, 台積電, 華邦電, NOR Flash, NVIDIA, Vera Rubin, HBM4E, SK海力士, 鴻海, 市場分析]
 summary: "本週 DIGITIMES 2026/06/15-20 報導把上週「FOPLP + CPO + 重電 + HBM 國族化」四線並進的格局，推進到「FOMC 短期雜音 + AI 結構性紅利雙重訊號」的新階段：6/18 FOMC 維持利率不變但點陣圖偏鷹、鮑爾記者會對 AI 估值「降溫」訊號明顯；TSMC 6/16 獨家揭露與 Ibiden、群創三方驗證玻璃基板成果，封裝翹曲 COP 改善 16%、有效熱膨脹係數降低 19%、電阻降低 27%、電感降低 42%，代表玻璃基板正式進入產業化驗證；DIGITIMES 2026/06/18 獨家報導華邦電 NOR Flash 確定 2026 下半年打入 NVIDIA Vera Rubin 平台，單一機櫃搭載 600 顆以上 NOR Flash，2027 年有機會取得半數市佔，記憶體外溢效應進一步擴大至 NOR Flash；6/18 同步報導三星甫宣布送樣 12 層 HBM4E，SK 海力士火速跟進樣品供貨，HBM4E 戰升溫；6/18 報導 Marvell 洽談台積電 A14（1.4 奈米）製程，COO 表示「AI 競爭必須與最好的合作」；6/18 報導鴻海攜手「重電三巨頭」從算力跨足電力持續推進；黃仁勳 6/17 指出「美國能源不足拖慢 AI 產業發展」、南韓獲 Vera Rubin 優先供應。本週情緒由上週四線並進，**進入「FOMC 短期雜音（6/19 點陣圖偏鷹 + 鮑爾 AI 估值降溫）+ AI 結構性紅利（CoPoS 玻璃基板 + NOR Flash 打入 Vera Rubin + HBM4E 戰升溫 + Marvell 洽談 A14 + 鴻海重電整合）雙重訊號的關鍵轉折**。建議加碼群創（3481）、台積電（2330）、華邦電（2344）、旺宏（2337）、日月光投控（3711）、京元電（2449）、欣銓（3264）、上詮（3363）、聯亞（3081）、鴻海（2317）、華城（1519）、大同（2371），並留意 7 月初 NVIDIA 投資人會議、Vera Rubin 量產時程、FOPLP 與 CoPoS 試產進度。"
 ---
 
