@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import Header from '../../components/Header'
 import MarkdownContent from '../../components/MarkdownContent'
 import TableOfContents from '../../components/TableOfContents'
+import ShareButton from '../../components/ShareButton'
 import { getAllPosts, getPostBySlug, markdownToHtml } from '../../lib/posts'
 import { pageview } from '../../lib/analytics'
 
@@ -127,7 +128,14 @@ export default function ArticlePage({ post, darkMode, toggleDarkMode }: ArticleP
 
             <header className="article-detail-header">
               <h1 className="article-detail-title">{post.title}</h1>
-              <p className="article-detail-date">{formatDate(post.date)} • {post.author}</p>
+              <div className="flex items-center justify-between gap-4 flex-wrap mb-2">
+                <p className="article-detail-date !mb-0">{formatDate(post.date)} • {post.author}</p>
+                <ShareButton
+                  url={`https://franklin0407.github.io/frankly-speaking/blog/${post.slug}`}
+                  slug={post.slug}
+                  title={post.title}
+                />
+              </div>
               <div className="flex flex-wrap gap-2">
                 {post.tags.map((tag) => (
                   <span key={tag} className="article-tag">
