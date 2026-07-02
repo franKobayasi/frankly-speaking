@@ -85,7 +85,7 @@ export default function ArticlePage({ post, darkMode, toggleDarkMode }: ArticleP
         <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.summary} />
-        <meta property="og:url" content={`https://franklin0407.github.io/frankly-speaking/blog/${post.slug}`} />
+        <meta property="og:url" content={`https://franKobayasi.github.io/frankly-speaking/blog/${post.slug}`} />
         <meta property="og:site_name" content="frankly-speaking" />
         <meta property="article:published_time" content={post.date} />
         <meta property="article:author" content={post.author} />
@@ -111,7 +111,7 @@ export default function ArticlePage({ post, darkMode, toggleDarkMode }: ArticleP
               },
               datePublished: post.date,
               tags: post.tags,
-              url: `https://franklin0407.github.io/frankly-speaking/blog/${post.slug}`,
+              url: `https://franKobayasi.github.io/frankly-speaking/blog/${post.slug}`,
             }),
           }}
         />
@@ -124,18 +124,18 @@ export default function ArticlePage({ post, darkMode, toggleDarkMode }: ArticleP
           <TableOfContents content={post.content} />
 
           <article className="article-detail">
-            <Link href="/blog" className="back-link">← Back to Blog</Link>
+            <div className="flex items-center justify-between gap-4 mb-6">
+              <Link href="/blog" className="back-link !mb-0">← Back to Blog</Link>
+              <ShareButton
+                url={`https://franKobayasi.github.io/frankly-speaking/blog/${post.slug}`}
+                slug={post.slug}
+                title={post.title}
+              />
+            </div>
 
             <header className="article-detail-header">
               <h1 className="article-detail-title">{post.title}</h1>
-              <div className="flex items-center justify-between gap-4 flex-wrap mb-2">
-                <p className="article-detail-date !mb-0">{formatDate(post.date)} • {post.author}</p>
-                <ShareButton
-                  url={`https://franklin0407.github.io/frankly-speaking/blog/${post.slug}`}
-                  slug={post.slug}
-                  title={post.title}
-                />
-              </div>
+              <p className="article-detail-date">{formatDate(post.date)} • {post.author}</p>
               <div className="flex flex-wrap gap-2">
                 {post.tags.map((tag) => (
                   <span key={tag} className="article-tag">

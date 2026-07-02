@@ -13,6 +13,12 @@ interface ShareButtonProps {
 export default function ShareButton({ url, slug, title }: ShareButtonProps) {
   const [copied, setCopied] = useState(false)
   const [error, setError] = useState(false)
+  // 避免 hydration mismatch — 預設黑圖，等 mount 後切換
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     if (!copied && !error) return
@@ -29,11 +35,11 @@ export default function ShareButton({ url, slug, title }: ShareButtonProps) {
   }
 
   const handleShare = async () => {
-    // 1) 組出帶 UTM 的分享 URL
-    // window.location 在 GitHub Pages 上會是 https://franklin0407.github.io/frankly-speaking/blog/[slug]
-    const shareUrl = buildShareUrl(window.location.origin + window.location.pathname.replace(/\/$/, ''), window.location.search)
+    const shareUrl = buildShareUrl(
+      window.location.origin + window.location.pathname.replace(/\/$/, ''),
+      window.location.search
+    )
 
-    // 2) 送 GA event — 使用者按下「分享」這件事本身就是事件
     event('share_btn', {
       article_slug: slug,
       article_title: title,
@@ -41,12 +47,10 @@ export default function ShareButton({ url, slug, title }: ShareButtonProps) {
       share_method: 'copy_link',
     })
 
-    // 3) 複製到剪貼簿
     try {
       if (navigator.clipboard && window.isSecureContext) {
         await navigator.clipboard.writeText(shareUrl)
       } else {
-        // Fallback：舊瀏覽器 / 非 HTTPS
         const textarea = document.createElement('textarea')
         textarea.value = shareUrl
         textarea.style.position = 'fixed'
@@ -64,35 +68,30 @@ export default function ShareButton({ url, slug, title }: ShareButtonProps) {
     }
   }
 
+  // mounted 前一律用黑圖（避免 dark mode 初始 flash）
+  // mounted 後依目前 .dark class 切換
+  const isDark = mounted && typeof document !== 'undefined' && document.documentElement.classList.contains('dark')
+  const iconSrc = isDark ? '/icons/share-white.png' : '/icons/share-black.png'
+
   return (
     <div className="share-button-wrapper relative inline-flex">
       <button
         type="button"
         onClick={handleShare}
-        className="share-btn"
+        className="share-icon-btn"
         aria-label="Copy share link to clipboard"
         title="Copy share link"
       >
-        {/* Icon: link/chain */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={iconSrc}
+          alt=""
+          width="20"
+          height="20"
           aria-hidden="true"
-        >
-          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-        </svg>
-        <span>Share</span>
+        />
       </button>
 
-      {/* Toast */}
       {(copied || error) && (
         <div
           className={`share-toast ${error ? 'share-toast--error' : ''}`}
