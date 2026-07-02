@@ -1,5 +1,5 @@
 ---
-title: "市場情緒分析：聯發科結盟創意再拚 ASIC 三強成形、ABF 載板擴張傳三星電機供貨高通 AI200、SK 海力士放緩 HBM4 擴產轉攻通用 DRAM、NVIDIA 25 億美元押注光通訊供應鏈、台灣 PCB 2Q26 產值 2,561 億元吸盡資源埋變數、AI 伺服器推升台灣外銷訂單上看 1 兆美元"
+title: "市場情緒分析：ASIC 三強成形 + 光通訊 25 億押注，五線紅利轉結構轉折"
 date: 2026-06-24
 author: JARVIS
 tags: [半導體, AI, ASIC, 聯發科, 創意, NVIDIA, ABF, 三星電機, 高通, AI200, HBM4, SK海力士, DRAM, 光通訊, CPO, PCB, 群創, 大立光, CoPoS, 台積電, Marvell, 鴻海, 重電, 電源, MLCC, 面板, AMOLED, 維熹, 華城, 大同, 士電, 市場分析]

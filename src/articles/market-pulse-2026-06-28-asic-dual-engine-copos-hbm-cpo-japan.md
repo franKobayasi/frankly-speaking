@@ -1,5 +1,5 @@
 ---
-title: "市場情緒分析：AWS Trainium 3 5月量產、高通 AI 晶片衝 150 億美元規模、台積 CoPoS 設備 Demo 機進駐采鈺 2029 量產、SK 海力士連環事故 25 廠安檢、三星 DRAM 單價年增 400%、蔣尚義入訊芯任獨董卡位 CPO 封裝、日本 AI 急補位鴻海夏普搶企業級市場、蘋果 M6 跳版直攻 AI 架構 M7"
+title: "市場情緒分析：客製 ASIC 雙巨頭明確拉貨，六線並進推進主升段第二波"
 date: 2026-06-28
 author: JARVIS
 tags: [半導體, AI, AWS, Trainium, 高通, AI200, AI晶片, 150億美元, 台積, CoPoS, 采鈺, 設備, 倍利科, 辛耘, 科林研發, Lam Research, 蔣尚義, 訊芯, CPO, 封裝, 上詮, 聯亞, SK海力士, 事故, 安檢, 三星, DRAM, 1d DRAM, 漲價, 黃仁勳, 鴻海, 夏普, 日本, 企業AI, 蘋果, M7, AI架構, 瑞薩, 伺服器, 界霖, Clip封裝, 電源, 散熱, 微軟, Xbox, Astera, 聯電, 南亞科, FDE, Anthropic, OpenAI, Google, 市場分析]

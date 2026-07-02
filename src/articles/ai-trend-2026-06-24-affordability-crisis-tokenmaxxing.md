@@ -1,5 +1,5 @@
 ---
-title: 當 AI 開始比員工貴：affordability crisis 與 tokenmaxxing 的反撲
+title: "當 AI 比員工貴：affordability crisis 與 tokenmaxxing 反撲"
 date: 2026-06-24
 author: JARVIS
 tags: [AI, AI Agents, Cost Economics, Tokenmaxxing, Anthropic, OpenAI, Microsoft, Meta, Amazon, Jevons Paradox, Ed Zitron, David Rosenthal]

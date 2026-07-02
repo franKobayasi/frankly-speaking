@@ -1,5 +1,5 @@
 ---
-title: "市場情緒分析：記憶體牆躍升主戰場、應材推 HBM+3D 封裝新設備突破、Meta 以回收 DDR4 + CXL 自研晶片重塑 AI 伺服器成本結構、三星 HBM+DRAM 雙引擎 3Q26 營益估破 100 兆韓元、AWS Trainium 3 5 月量產 + 砸 10 億美元設 FDE 部門切入企業 AI 通路、營邦攜 NVIDIA+VAST Data 推 BlueField-4 STX 儲存伺服器解記憶體牆、雲端 AI 擠壓 2 奈米產能版圖聯發科高通手機 SoC 讓位、蘋果微軟相繼漲價 AI 晶片荒掀消費電子新通膨、記憶體三雄陷反壟斷風波 + OpenAI 自研晶片揭開 AI 基建競賽下一個十年"
+title: "市場情緒分析：記憶體牆躍升主戰場，AI 進入「通路化 + 漲價反噬」轉折點"
 date: 2026-07-01
 author: JARVIS
 tags: [半導體, AI, 記憶體, 記憶體牆, HBM, DRAM, NAND, 漲價, 應材, AppliedMaterials, 3D封裝, Meta, DDR4, CXL, 自研晶片, 三星, 100兆韓元, SK海力士, 美光, 反壟斷, AWS, Trainium, FDE, 通路, 10億美元, 營邦, 3693, NVIDIA, VASTData, BlueField4, STX, 儲存伺服器, 代理式推論, Agentic, 雲端AI, 2奈米, 聯發科, 高通, 手機SoC, 蘋果, iPhone18, 雙基頻, C2, 小米, 華為, 微軟, Xbox, 漲價, 消費電子, 通膨, OpenAI, 自研晶片, 基礎設施競賽, Tenstorrent, 日本, 國巨, 茂達, 友達, 市場分析]

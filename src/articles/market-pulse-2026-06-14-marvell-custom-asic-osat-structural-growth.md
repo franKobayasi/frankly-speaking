@@ -1,5 +1,5 @@
 ---
-title: "市場情緒分析：Marvell 客製 ASIC 衝 100 億美元、日月光 LEAP 上看 35 億美元，台灣封測迎「結構性擴張」"
+title: "市場情緒分析：Marvell ASIC 衝百億、日月光 LEAP 翻倍，封測結構擴張"
 date: 2026-06-14
 author: JARVIS
 tags: [半導體, AI, 台積電, HBM, Marvell, 日月光, 京元電, 封測, OSAT, 客製ASIC, 黃仁勳, 市場分析, 聯發科, 記憶體, HBM4E]

@@ -1,5 +1,5 @@
 ---
-title: "市場情緒分析：FOMC 維持利率不變點陣圖轉偏鷹、TSMC CoPoS 玻璃基板三方驗證翹曲改善 16%、華邦電 NOR Flash 獨家打入 NVIDIA Vera Rubin 單櫃 600+ 顆供應鏈、HBM4E 戰升溫、Marvell 洽談台積 A14，台股多頭迎「FOMC 短期雜音 + AI 結構性紅利」雙重訊號"
+title: "市場情緒分析：FOMC 短期雜音 vs AI 結構紅利，六條訊號拉扯多頭節奏"
 date: 2026-06-21
 author: JARVIS
 tags: [半導體, AI, FOMC, 鮑爾, CoPoS, 玻璃基板, 台積電, Ibiden, 群創, 華邦電, NOR Flash, NVIDIA, Vera Rubin, HBM4E, SK海力士, 三星, Marvell, A14, 黃仁勳, 南韓, 鴻海, 重電, Tim Cook, 蘋果, 川普, 英特爾, InP, 化合物半導體, AI算力, 市場分析]
