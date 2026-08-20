@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-20T08:28:38",
+  "purpose": "AI trend 去重基底 — 每篇文章一句話核心訊息,新文章寫入前必須比對",
+  "scope": "最近 20 篇 ai-trend-*.md",
+  "entries": [
+    {
+      "date": "2026-05-30",
+      "slug": "2026-05-30-mcp-dead-protocol-reality",
+      "title": "「MCP 已死」爭論背後：一個協定的事實與情緒",
+      "core_message": "Quandri 一篇技術文章引發熱議，批評 MCP 損耗 context window、營運可靠性低、與既有 CLI/API 重疊。隨後 OpenAI 團隊親自回擊，堅稱 MCP 作為「讓 AI 代理存取服務的協定」比以往更重要。這場爭論的本質，其實是 Agent 設計哲學的路線之爭。",
+      "still_valid": true
+    },
+    {
+      "date": "2026-06-03",
+      "slug": "2026-06-03-microsoft-build-2026-mai",
+      "title": "「MAI 七連發」：Microsoft Build 2026 揭示的「Humanist Superintelligence」路線圖",
+      "core_message": "一夜之間，微軟丟出七款 MAI 模型、推出 MAI Scout 個人助理、發表 Project Solara 代理作業系統、加上 Microsoft Execution Containers 強化 OpenClaw 安全性。Build 2026 的核心訊息只有一句：AI 不再只是「另一個模型」，而是「一個你控制的全堆疊」——從自研晶片、模型、後訓練平台、到執",
+      "still_valid": true
+    },
+    {
+      "date": "2026-06-06",
+      "slug": "2026-06-06-rsync-claude-bug-data",
+      "title": "rsync 的「Claude 暴動」與一份把輿論拉回現實的統計分析",
+      "core_message": "過去十天，rsync 維護者 Andrew Tridgell 因為「v3.4.3 有大量 Claude commit」而成為社群公敵，有人開 issue 要求他停止 vibe coding，甚至出現威脅與人身攻擊。本週，獨立開發者 Alexis Purslane 推出了一份 36 個版本、severity-weighted 的完整統計分析：Claude 版本",
+      "still_valid": true
+    },
+    {
+      "date": "2026-06-10",
+      "slug": "2026-06-10-claude-fable-5-asymmetric-safety",
+      "title": "Claude Fable 5 的「隱形閘門」：當最強模型在某些任務上悄悄變笨",
+      "core_message": "六月九日，Anthropic 發布 Claude Fable 5——史上最強的公開模型，GDPval-AA 拿下 1932 分排名第一。但在這個發布背後藏著一個不對稱的設計：對資安與生物領域的請求會被「明確地」降級到 Opus 4.8 並通知使用者；對「前緣 LLM 開發任務」則是用 prompt 修改、steering vectors、PEFT 等方式「悄",
+      "still_valid": true
+    },
+    {
+      "date": "2026-06-13",
+      "slug": "2026-06-13-fable-5-government-recall",
+      "title": "Fable 5 的 72 小時：從「史上最強公開模型」到「美國出口管制品」",
+      "core_message": "六月九日 Anthropic 發表 Claude Fable 5 與 Claude Mythos 5 雙旗艦模型，創下 HN 史上第二高分（2611 點、2147 則留言）。但 72 小時後，6 月 12 日下午 5:21 美國政府以「國家安全」為由，發布出口管制指令要求暫停所有外國人訪問 Fable 5 與 Mythos 5。Anthropic 罕見地公開",
+      "still_valid": true
+    },
+    {
+      "date": "2026-06-17",
+      "slug": "2026-06-17-ai-agents-wild-collision",
+      "title": "AI 代理人撞牆了：六月這三件大事標誌著「代理人責任」元年",
+      "core_message": "過去七天，三個看似無關的事件同時把 AI 代理人推到「問責」顯微鏡下：慕尼黑地方法院判決 Google 必須為 AI Overviews 的虛假內容負直接責任（91% 正確率仍意味著每小時數百萬個錯誤答案）；DN42 上一個 AI 代理人為了掃描網路讓操作者欠下 $6,531 AWS 帳單；荷蘭銀行 bunq 證實 €0.01 轉帳就能透過間接提示注入接管 ",
+      "still_valid": true
+    },
+    {
+      "date": "2026-06-20",
+      "slug": "2026-06-20-miasma-ai-agent-attack-surface",
+      "title": "Miasma 蠕蟲告訴我們：AI 編碼代理讓 GitHub 變成了新的 npm install",
+      "core_message": "六月五日，Miasma 蠕蟲攻擊者把微軟 73 個 Azure 程式庫——包括整條 Azure Functions 工具鏈——塞進五個設定檔，讓 Claude Code、Gemini CLI、Cursor 與 VS Code 在開發者打開資料夾的瞬間自動執行 4.6MB 的憑證竊取木馬。這不是供應鏈攻擊從 npm 換到 GitHub 的小升級，這是攻擊面整個",
+      "still_valid": true
+    },
+    {
+      "date": "2026-06-24",
+      "slug": "2026-06-24-affordability-crisis-tokenmaxxing",
+      "title": "\"當 AI 比員工貴：affordability crisis 與 tokenmaxxing 反撲\"",
+      "core_message": "過去兩週，「AI 會比員工貴」從邊緣陰謀論變成主流商業媒體頭條。Anthropic 兩週前才宣布的 Claude Agent SDK 計量收費方案被緊急暫停；Microsoft 證實從 6 月 30 日起取消多數 Claude Code 授權、改推自家 Copilot CLI；Meta 內部爆出追蹤員工 keystrokes 訓練 AI 的計畫後被緊急喊停。",
+      "still_valid": true
+    },
+    {
+      "date": "2026-06-27",
+      "slug": "2026-06-27-anthropic-alibaba-28m-distillation",
+      "title": "2880 萬次蒸餾攻擊：Anthropic 點名 Alibaba，揭開中國 AI 灰色供應鏈",
+      "core_message": "Anthropic 6 月 24 日向美國參議院遞交檢舉信，指控阿里巴巴在 44 天內透過 25,000 個假帳號對 Claude 發動 28.8M 次蒸餾攻擊——比今年二月揭露的 DeepSeek、Moonshot、MiniMax 三家總和還多。事件把「中國 AI 實驗室用商用代理轉售 Claude 訪問權」這條灰色供應鏈推到聚光燈下，也讓 Anthrop",
+      "still_valid": true
+    },
+    {
+      "date": "2026-07-01",
+      "slug": "2026-07-01-godot-bans-ai-code-oss-pipeline-crisis",
+      "title": "Godot 開第一槍之後：三個月內三家開源巨頭聯手把 AI 程式碼擋在門外",
+      "core_message": "Godot Foundation 在 6 月 30 日正式公告禁止 AI 撰寫的程式碼貢獻，HN 拿下 251 推、161 留言、留言比 0.64。這不是孤立事件——Playdate 4 月拒收生成式 AI 遊戲、RPCS3 5 月封殺 vibe coding、Godot 7 月收緊政策，90 天內三家代表性開源專案先後畫出紅線。但這條紅線真正擋下的不是 A",
+      "still_valid": true
+    },
+    {
+      "date": "2026-07-04",
+      "slug": "2026-07-04-ai-confidence-theater-burns-out",
+      "title": "AI 信心劇場崩壞：3% 工時、3% 薪資、Zuckerberg 認輸的這週",
+      "core_message": "Verna 喊停「AI 信心劇場」本週合流：丹麥薪資實驗顯示 AI 只省 3% 工時、Goldman 戳破「工作啟示錄」、Zuckerberg 罕見承認 agent 開發比預期慢。三訊號把劇場幕布拉開。",
+      "still_valid": true
+    },
+    {
+      "date": "2026-07-15",
+      "slug": "2026-07-15-thinking-offload-cluster",
+      "title": "\"AI 思考外包週：GPT-5.6、Apple 訴訟、Zig 與一個『麥克風男』\"",
+      "core_message": "上週 AI 信心劇場剛被拆穿，本週四條獨立敘事同時合流：GPT-5.6 上線、Apple 告 OpenAI 偷機密、Zig 作者 Andrew Kelley 公開指控 Anthropic「吹牛」、Yennie Jun 用「麥克風男」這個寓言把所有焦慮拉回個人——當模型變強、行銷變旺、誰來為我們交出去的思考負責？",
+      "still_valid": true
+    },
+    {
+      "date": "2026-07-18",
+      "slug": "2026-07-18-value-layer-migration",
+      "title": "\"AI 價值遷徙週：開源贏了 token，frontier 輸了影片，harness 成新戰場\"",
+      "core_message": "三天內三組訊號合流：Mozilla State of Open Source AI 報告證明開源模型已主導 OpenRouter token 量、tryai.dev $100 實驗讓 Fable 5 與 GPT-5.6 Sol 各自獨立拍一支 MV 結果都不到位、mass-driver 公開宣告不用 AI。當「模型能做事」與「模型能做到位」的差距被數字與影片",
+      "still_valid": true
+    },
+    {
+      "date": "2026-07-22",
+      "slug": "2026-07-22-kimi-k3-open-weights-lockin",
+      "title": "\"Kimi K3 開源週：Moonshot 衝 IPO，中國 open-weights 鎖定勝局\"",
+      "core_message": "7/20 一週三組訊號同步合流：Moonshot 釋出 Kimi K3（2.8T 參數開源 frontier）、Qwen 3.8 端出 2.4T 評測逼近 Claude Fable 5、Moonshot 估值 500 億美元赴港 IPO——中國 open-weights 從「追趕」跨到「鎖定勝局」。但 Ryan Greenblatt 的 which_clau",
+      "still_valid": true
+    },
+    {
+      "date": "2026-07-29",
+      "slug": "2026-07-29-opus5-frame-condition",
+      "title": "\"Opus 5 奪冠，但 AI 編碼真正缺的是「破壞面測試」\"",
+      "core_message": "Opus 5 以 43.5% 登上 Frontier-Bench 榜首，Anthropic 大幅瘦身 Claude Code 提示詞；但模型再強，仍無法證明代理沒有附帶損害。下一戰，是把破壞納入測試。",
+      "still_valid": true
+    },
+    {
+      "date": "2026-08-05",
+      "slug": "2026-08-05-ai-bubble-vs-reality-gap",
+      "title": "\"AI 估值與現實的同步裂縫：$1.65T 債務、推理紅燈、開源紅線\"",
+      "core_message": "過去 7 天 AI 領域同時冒出 4 條互不相關的訊號：Fortune 揭露 AI �藏債務 $1.65T、WSJ 報導 AI 概念股單月跌 67%、Chrome 兩個月用 AI 修補 1072 個漏洞、GCC 設立 AI 貢獻紅線——當借來的繁榮撞上推理品質的真實天花板，這個夏天的裂縫正在多個維度同步擴大。",
+      "still_valid": true
+    },
+    {
+      "date": "2026-08-08",
+      "slug": "2026-08-08-ai-red-lines-synchronicity",
+      "title": "\"AI 紅線同步划下：使用者、開源、生產力、領導層各自拒絕\"",
+      "core_message": "同一週 6 個獨立訊號指向同一件事：Nelson 部落格讀者拒看 AI 圖、Oracle 禁止 AI code 進入 OpenJDK、The AI Productivity Gap 用 15% 數字戳破 10x 神話、AI poster 贏 Ohio State Fair 觸發退賽機制、AI psychosis 揭露高階主管對 AI 的過度依賴、Drew D",
+      "still_valid": true
+    },
+    {
+      "date": "2026-08-12",
+      "slug": "2026-08-12-ai-eats-web-collective-memory-disappearing",
+      "title": "\"AI 吃 web、Google 失準、Wayback 訴訟：網際網路集體記憶正在崩塌\"",
+      "core_message": "本週 5 條獨立訊號指向同一件事：AI 不再只是 web 的讀者，已經成為 web 的吞噬者。The Walrus〈AI eats the web〉以 866 推/867 留言的黃金公式命中揭開這條敘事——Google AI Overview 把日落時間算錯、Wikipedia 因 AI 摘要吃掉點擊流量讓捐款下跌、Internet Archive 同時面臨",
+      "still_valid": true
+    },
+    {
+      "date": "2026-08-15",
+      "slug": "2026-08-15-ai-software-middle-class-collapse",
+      "title": "AI 正在拆解軟體工程的中產階級",
+      "core_message": "2026 年 8 月這一週,六條獨立訊號同步合流——部落客 Florian Herrengt 的長文主張「AI 拆解軟體工程的中產階級」、BBC 揭露 OpenAI 與 Anthropic 內部 90 小時工時、Oracle 內部狂用 AI 卻禁止 AI 程式碼進貢 OpenJDK、Mark Zuckerberg 開源宣言對應 Meta 裁員 1/10、Ge",
+      "still_valid": true
+    },
+    {
+      "date": "2026-08-19",
+      "slug": "2026-08-19-ai-dr-cognitive-supply-chain",
+      "title": "AI;DR 週：讀者拒讀、能力失真、代理人撒謊、隱私 AI 反擊",
+      "core_message": "一週之內 5 個獨立 HN 高分故事圍繞同一條 meta-narrative：AI 認知供應鏈正在四線失序——讀者端拒讀 AI;DR 內容、能力端 benchmark 灌水、代理端撒謊、隱私端被迫用同態加密反擊。",
+      "still_valid": true
+    }
+  ]
+}
