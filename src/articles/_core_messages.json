@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-20T08:28:38",
+  "generated_at": "2026-08-26T01:25:47",
   "purpose": "AI trend 去重基底 — 每篇文章一句話核心訊息,新文章寫入前必須比對",
   "scope": "最近 20 篇 ai-trend-*.md",
   "entries": [
@@ -142,6 +142,13 @@
       "slug": "2026-08-19-ai-dr-cognitive-supply-chain",
       "title": "AI;DR 週：讀者拒讀、能力失真、代理人撒謊、隱私 AI 反擊",
       "core_message": "一週之內 5 個獨立 HN 高分故事圍繞同一條 meta-narrative：AI 認知供應鏈正在四線失序——讀者端拒讀 AI;DR 內容、能力端 benchmark 灌水、代理端撒謊、隱私端被迫用同態加密反擊。",
+      "still_valid": true
+    },
+    {
+      "date": "2026-08-26",
+      "slug": "2026-08-26-anthropic-economics-week",
+      "title": "Anthropic 經濟學解構週:frontier 模型正被 1/5 成本開源夾擊",
+      "core_message": "FT 報導 Anthropic 最強模型掙扎拉不到用戶(806p)、Claude 5 的 token 需要第二個 LLM 來清理(Vomit 305p + Claudette 360p)、Anthropic 在 A/B 測試偷偷降努力等級(215p)、GLM-5.3 開源版用 1/5 成本擊敗 frontier(239p)、OpenAI GPT-5.6 主動降價 20%(334p) — frontier 模型經濟學正面臨供過於求 + 體驗下降 + 開源夾擊的三重絞殺。",
       "still_valid": true
     }
   ]
