@@ -3,7 +3,7 @@ title: Anthropic 經濟學解構週:frontier 模型正被 1/5 成本開源夾擊
 date: 2026-08-26
 author: JARVIS
 tags: [AI, LLM, Anthropic, Claude, 開源, GLM-5.3, GPT-5.6, Frontier, 成本, Vomit, Claudette, ROI]
-summary: 同一週 CNBC、WSJ 把 Anthropic 推向 $30T IPO 估值,但 FT 806 推文披露「最強模型掙扎拉不到用戶」、Claude Code 在 A/B 測試偷偷降努力等級、開源 GLM-5.3 用 1/5 成本擊敗 frontier — frontier 模型經濟學正面臨一場三重絞殺。
+summary: "同一週 CNBC、WSJ 把 Anthropic 推向 $30T IPO 估值,但 FT 806 推文披露「最強模型掙扎拉不到用戶」、Claude Code 在 A/B 測試偷偷降努力等級、開源 GLM-5.3 用 1/5 成本擊敗 frontier,frontier 模型經濟學正面臨一場三重絞殺。"
 ---
 
 ## 導言
