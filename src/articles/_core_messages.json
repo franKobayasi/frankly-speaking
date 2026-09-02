@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-26T01:25:47",
+  "generated_at": "2026-09-02T01:00:00",
   "purpose": "AI trend 去重基底 — 每篇文章一句話核心訊息,新文章寫入前必須比對",
   "scope": "最近 20 篇 ai-trend-*.md",
   "entries": [
@@ -149,6 +149,13 @@
       "slug": "2026-08-26-anthropic-economics-week",
       "title": "Anthropic 經濟學解構週:frontier 模型正被 1/5 成本開源夾擊",
       "core_message": "FT 報導 Anthropic 最強模型掙扎拉不到用戶(806p)、Claude 5 的 token 需要第二個 LLM 來清理(Vomit 305p + Claudette 360p)、Anthropic 在 A/B 測試偷偷降努力等級(215p)、GLM-5.3 開源版用 1/5 成本擊敗 frontier(239p)、OpenAI GPT-5.6 主動降價 20%(334p) — frontier 模型經濟學正面臨供過於求 + 體驗下降 + 開源夾擊的三重絞殺。",
+      "still_valid": true
+    },
+    {
+      "date": "2026-09-02",
+      "slug": "2026-09-02-ai-replacement-reversal-week",
+      "title": "AI 取代反轉週：報復性 AI CEO、AI 版權攻擊、開源分流",
+      "core_message": "2026-08-27 到 08-29 五個獨立 HN 高分故事圍繞同一條 meta-narrative：AI 取代人的單向敘事首次出現多向裂解——工程師被裁後開源 AI CEO 反擊(SenteLabsAI/OpenExecutive 1031p/717c)、Tracer.AI 規模化攻擊開源社群(Luanti DMCA 526p)、Debian 辯論後通過 GenAI 政策(515p/484c)、蓋茲罕見發表動盪 AI 時代宣言(360p/622c)、Anthropic 在法院贏了 Pentagon 黑名單(646p/435c)。AI 取代不再是單向,是這個夏天結束時取代關係的多向裂解。",
       "still_valid": true
     }
   ]
