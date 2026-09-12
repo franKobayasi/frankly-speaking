@@ -164,6 +164,13 @@
       "title": "AI 泡沫裂縫週：加州入法、YC 被吞噬、H-1B 取代 AI 為裁員藉口",
       "core_message": "2026-08-30 到 09-04 六個獨立 HN 故事同步指向同一條 meta-narrative：AI 泡沫的裂縫在多個維度同步擴大——加州 SB-53 法案(315p/221c)讓 frontier AI 透明化成法律強制、iRobot 創辦人 Rodney Brooks(259p/192c)罕見公開戳破機器人 hype、Inc. 揭露 Y Combinator 被 AI 泡沫反噬(206p/223c,本週最高留言比 1.08)、Vanessa Wingårdh 用 H-1B 簽證資料戳破「公司用 AI 為裁員說謊」敘事(199p/179c)、Sharif Shameem 的〈28 AI Tools I Wish Existed〉(161p/109c)反映工具紅利耗盡、Antropia.studio 的〈To AI or not to AI〉(102p/86c)把「拒絕 AI」變成開發者合理選擇。沒主菜級故事但六個獨立證據組合出『生態系同時對 AI 失去信仰』的訊號。",
       "still_valid": true
+    },
+    {
+      "date": "2026-09-12",
+      "slug": "2026-09-12-user-exodus-week",
+      "title": "使用者撤離週：LibreOffice 賣「沒有 AI」、HN 一天兩個過濾器、NYC 選市長把 AI 踢出教室",
+      "core_message": "2026-09-08 到 09-11 六個獨立訊號同步合流——LibreOffice 26.8 以「沒有 AI」破下載紀錄(714p/237c)、HN 同一天冒出兩個獨立 Show HN 過濾器(hcker.news 169p + unslop.news 170p)、Ask HN「限流 AI 新聞」拿 745p、Mamdani NYC 學校禁用 AI(220p/182c)、How I feel about AI(165p/265c, ratio 1.61)與 Feeling Sad about AI(166p/266c, ratio 1.60)兩條情緒見證——使用者撤離已從『態度調查』升級到『替代基礎建設』,LibreOffice 取消 AI 預設、HN 取消 AI 預設、NYC 教室取消 AI 預設,三個領域同步『取消預設』是不可逆的市場行為。",
+      "still_valid": true
     }
   ]
 }
