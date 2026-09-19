@@ -171,6 +171,13 @@
       "title": "使用者撤離週：LibreOffice 賣「沒有 AI」、HN 一天兩個過濾器、NYC 選市長把 AI 踢出教室",
       "core_message": "2026-09-08 到 09-11 六個獨立訊號同步合流——LibreOffice 26.8 以「沒有 AI」破下載紀錄(714p/237c)、HN 同一天冒出兩個獨立 Show HN 過濾器(hcker.news 169p + unslop.news 170p)、Ask HN「限流 AI 新聞」拿 745p、Mamdani NYC 學校禁用 AI(220p/182c)、How I feel about AI(165p/265c, ratio 1.61)與 Feeling Sad about AI(166p/266c, ratio 1.60)兩條情緒見證——使用者撤離已從『態度調查』升級到『替代基礎建設』,LibreOffice 取消 AI 預設、HN 取消 AI 預設、NYC 教室取消 AI 預設,三個領域同步『取消預設』是不可逆的市場行為。",
       "still_valid": true
+    },
+    {
+      "date": "2026-09-19",
+      "slug": "2026-09-19-fields-medal-ai-mathematics-declaration",
+      "title": "AI 解題別挖礦：Tao + Fields Medal 25 人的學術生態緊急宣言",
+      "core_message": "Terence Tao 領銜 25 位 Fields Medal 獲獎者(含 Scholze、Villani、Viazovska、Hairer、Huh 等)在 9/11 發布〈A Misalignment of AI in Mathematics〉宣言(HN 1240p/1211c, ratio 0.98,本年最高留言密度之一)。核心論點是 AI 公司把「解開數學難題」當 benchmark 推進的這個目標,正在不可逆地夷平學術社群的「difficulty landscape」(難度地景),並因 AI 公司不揭露「負面結果」,讓「識別值得解決的問題」這項人類稀缺資源走向枯竭。Tao 9/8 Mastodon 提出水資源比喻:海洋雖無限,飲用水卻稀缺。反方 Buzzard(Lean)認為解方是更深度整合形式化證明工具而非停止。過去 8 期連續寫使用者撤離、紅線、泡沫、階級解構——本期首次拉到學術層:當人類判斷地景的能力被自動化,人類還剩下什麼。",
+      "still_valid": true
     }
   ]
 }
