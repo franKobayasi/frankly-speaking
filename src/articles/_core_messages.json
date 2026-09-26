@@ -185,6 +185,13 @@
       "title": "AI 進入生死決策週:Pentagon 承認 AI 誤擊伊朗學校、五角大廈幻覺情報、智識界全面撤離",
       "core_message": "2026-09-17 至 09-22 五個獨立 HN 來源同步合流:Pentagon 9/22 (387p/206c) 正式承認過度依賴 AI 導致誤擊伊朗學校 123 名兒童死亡、9/18 US Military (518p/392c) CNN 揭露 AI 幻覺情報險些引爆美中衝突、9/17 Pentagon Networks (5p) AI 把五角大廈老舊網路變成國安風險、9/17 AI Safety is Sex Cult (329p/280c) AI safety 圈文化崩壞無法踩煞車、9/22 AI Has No Wisdom (366p/510c) AI 不知道自己不知道給出高信心分數。這是史上第一次由國家級軍方自我承認 AI 直接導致 mass casualty,AI 從「bug 級風險」正式升級到 mass casualty 級風險——過去八週連續寫的「紅線、泡沫、階級解構、使用者撤離、AI;DR」全部撞上實體:當 AI 進入決策迴路,信心失真的後果從使用者失望、工程師失業、開源拒收,升級到 123 個小孩再也回不了家。",
       "still_valid": true
+    },
+    {
+      "date": "2026-09-26",
+      "slug": "2026-09-26-ai-sovereignty-week",
+      "title": "AI 主權轉移週:Nvidia 當央行、平台搶築主權高牆",
+      "core_message": "2026-09-12 至 09-26 五個獨立 HN 訊號同步合流,但沒有任何一個過黃金公式(>500p 且 ratio >0.8),走叢集敘事結構。《經濟學人》9/12 (584p/401c, r=0.69) 把 Nvidia 定調為「AI 的央行」、9/14 (228p/162c, r=0.71) Apple 程式碼顯示 Siri AI 可被 Claude/ChatGPT 整個換底、9/16 (234p/225c, r=0.96) Anthropic 把 Claude Cowork 與 chat 合併成「一個 Claude」、9/21 (152p/161c, r=1.06) Amazon 公開擋下 Meta Muse AI shopping agent、9/16 Mozilla+Mistral (590p/207c) 反向推出本地化 AI browsing。當 9-23 那篇寫「AI 進入決策迴路會殺人」,本週寫的是下一步:當 AI 變得危險,誰有權決定它的邊界——算力層(Nvidia)、平台層(Apple/Amazon)、模型層(Anthropic)同時被視為主權戰場,這是過去十二週紅線/使用者撤離/階級解構/信心崩塌敘事之後,第一個從架構層而非行為層切入的新框架。",
+      "still_valid": true
     }
   ]
 }
