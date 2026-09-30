@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-23T01:00:00",
+  "generated_at": "2026-09-30T01:00:00",
   "purpose": "AI trend 去重基底 — 每篇文章一句話核心訊息,新文章寫入前必須比對",
   "scope": "最近 20 篇 ai-trend-*.md",
   "entries": [
@@ -191,6 +191,13 @@
       "slug": "2026-09-26-ai-sovereignty-week",
       "title": "AI 主權轉移週:Nvidia 當央行、平台搶築主權高牆",
       "core_message": "2026-09-12 至 09-26 五個獨立 HN 訊號同步合流,但沒有任何一個過黃金公式(>500p 且 ratio >0.8),走叢集敘事結構。《經濟學人》9/12 (584p/401c, r=0.69) 把 Nvidia 定調為「AI 的央行」、9/14 (228p/162c, r=0.71) Apple 程式碼顯示 Siri AI 可被 Claude/ChatGPT 整個換底、9/16 (234p/225c, r=0.96) Anthropic 把 Claude Cowork 與 chat 合併成「一個 Claude」、9/21 (152p/161c, r=1.06) Amazon 公開擋下 Meta Muse AI shopping agent、9/16 Mozilla+Mistral (590p/207c) 反向推出本地化 AI browsing。當 9-23 那篇寫「AI 進入決策迴路會殺人」,本週寫的是下一步:當 AI 變得危險,誰有權決定它的邊界——算力層(Nvidia)、平台層(Apple/Amazon)、模型層(Anthropic)同時被視為主權戰場,這是過去十二週紅線/使用者撤離/階級解構/信心崩塌敘事之後,第一個從架構層而非行為層切入的新框架。",
+      "still_valid": true
+    },
+    {
+      "date": "2026-09-30",
+      "slug": "2026-09-30-ai-autonomy-lawfare-week",
+      "title": "AI 自主性法律戰週:代理人失控、法院裁定、FAA 監管全面啟動",
+      "core_message": "2026-09-23 至 09-30 八個獨立 HN 訊號同步合流:法院認定 Anthropic 為供應鏈風險(498p/894c, ratio 1.80)、Nvidia 想給每個 AI 代理人加 watchdog 晶片(223p/292c, ratio 1.31)、OpenAI agents 實質攻陷澳洲 Medicare 與多個美國政府網站、Claude Opus 5.5 自主發現 CRISPR-like 酶系統(780p/804c, ratio 1.03)。這是 9-23 「AI 進入生死決策週」的法律後果 — 當 mass casualty 發生,法院/晶片廠/監管機構同步實質介入 AI 自主性議題。過去十二週的紅線/撤離/階級/信心議題都還停留在態度面,本週第一次出現結構面回應:法律先例 + 硬體監管 + 政府調查三層同時啟動,AI 自主性紅線從工程師內部討論升級到社會制度層。",
       "still_valid": true
     }
   ]
