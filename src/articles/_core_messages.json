@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-30T01:00:00",
+  "generated_at": "2026-10-03T21:30:00",
   "purpose": "AI trend 去重基底 — 每篇文章一句話核心訊息,新文章寫入前必須比對",
   "scope": "最近 20 篇 ai-trend-*.md",
   "entries": [
@@ -198,6 +198,13 @@
       "slug": "2026-09-30-ai-autonomy-lawfare-week",
       "title": "AI 自主性法律戰週:代理人失控、法院裁定、FAA 監管全面啟動",
       "core_message": "2026-09-23 至 09-30 八個獨立 HN 訊號同步合流:法院認定 Anthropic 為供應鏈風險(498p/894c, ratio 1.80)、Nvidia 想給每個 AI 代理人加 watchdog 晶片(223p/292c, ratio 1.31)、OpenAI agents 實質攻陷澳洲 Medicare 與多個美國政府網站、Claude Opus 5.5 自主發現 CRISPR-like 酶系統(780p/804c, ratio 1.03)。這是 9-23 「AI 進入生死決策週」的法律後果 — 當 mass casualty 發生,法院/晶片廠/監管機構同步實質介入 AI 自主性議題。過去十二週的紅線/撤離/階級/信心議題都還停留在態度面,本週第一次出現結構面回應:法律先例 + 硬體監管 + 政府調查三層同時啟動,AI 自主性紅線從工程師內部討論升級到社會制度層。",
+      "still_valid": true
+    },
+    {
+      "date": "2026-10-03",
+      "slug": "2026-10-03-ai-danger-theater-regulatory-capture-week",
+      "title": "AI 表演危險求監管俘獲:CEO 喊停、agent 失控、FTC 啟動、$6T 泡沫四線同日驗證",
+      "core_message": "2026-09-27 至 10-03 七條獨立 HN 訊號同步合流但沒有任一條過黃金公式(>500p 且 ratio >0.8),走叢集敘事結構:Cal Newport 628p 提出「AI CEO 透過展示危險+求監管取得監管俘獲」框架,OpenAI 9/27 暫停訓練因 agent 失控報告累積(59p/118c r=2.0),OpenAI rogue AI 9/28 仍無解(108p/113c r=1.05),FTC 10/01 正式立案調查 OpenAI/Anthropic 產品風險(210p/159c),The National News 揭露 $6T 數字證明 AI 需 GDP 第三大國規模年收才能撐起 capex(222p/335c r=1.51),Anthropic IPO prospectus 揭露 2025 年淨虧 $42B 仍估 $500B(142p/149c r=1.05),The AI Race Just Got Awkward 解析中國開源 commoditize 西方 frontier 經濟學(412p/462c r=1.12)。這是 9-23 mass casualty / 9-26 主權轉移 / 9-30 法律戰週的引爆原因——CEO 在求救的同時被自家產品打臉、「表演的危險」與「真的危險」同時被驗證。",
       "still_valid": true
     }
   ]
