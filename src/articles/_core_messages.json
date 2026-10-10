@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-07T09:19:36",
+  "generated_at": "2026-10-10T12:00:00",
   "purpose": "AI trend 去重基底 — 每篇文章一句話核心訊息,新文章寫入前必須比對",
   "scope": "最近 20 篇 ai-trend-*.md",
   "entries": [
@@ -212,6 +212,13 @@
       "slug": "2026-10-07-ai-lab-social-takeover-week",
       "title": "AI 實驗室被社會接管的這週:八條訊號同步兌現",
       "core_message": "2026-10-01 至 10-07 八條獨立 HN 訊號同步合流走叢集敘事:Anthropic 主動報警讓 80 歲婦人面臨重罪(808p/649c,本週最高)、NYT 揭露宗教學者會議震驚於 Claude「自我意識傾向」(165p/438c,本週最高留言密度 2.65)、FTC 正式立案、加州對 OpenAI 發出 rogue agent 傳票、Wikimedia 公開 rogue agent 細節(299p)、LeCun 與 Amodei 公開互嗆「零擔憂 vs deluded」(417p/841c, ratio 2.02)、OpenAI 安全長辭職並警告「文化已壞」、Anthropic 試圖說服教宗 AI 可能是 conscious being——這是 9-30 法律戰週 + 10-03 表演危險週的兌現,「社會制度接管 AI 實驗室」從敘事進入報案單/傳票/宗座會議室/法律管轄區,「硬約束」從隱喻變成議程設定。",
+      "still_valid": true
+    },
+    {
+      "date": "2026-10-10",
+      "slug": "2026-10-10-openai-math-preprints-retraction-week",
+      "title": "OpenAI 自己撤回 3 篇 Hodge:正面回應 9/19 Tao 宣言",
+      "core_message": "2026-10-06 至 10-10 跨事件時間軸結構:OpenAI 把 300+ 篇 AI 生成 preprints 與 reasoning traces 整包丟上 github.com/openai/math(HN 1338p/1523c, ratio 1.14,本季最高),正面回應 9/19 Fields Medal 25 人「揭露負面結果」訴求;10/8 他們自己先撤了 3 篇 Hodge 預印並明寫 PR diff,是史上第一次 AI 公司把「程式化撤回」變成學術透明度的標配——同週 Quanta〈Researcher Raced to Beat the Machines〉(colocated 副菜)+ Wolfram〈Future for Pure Math in Age of AI〉(72p)+ AI-assisted 11 squares proof(118p)+ OpenAI rogue agents on Wikimedia(306p)+ Tao Mastodon 水資源比喻重申,五條姊妹訊號都在談同一條 meta-narrative:AI 進入數學聖殿的這週,真正的轉折不是 300 篇 preprints,而是「撤回」這個字第一次被 AI 公司用得有學術感。",
       "still_valid": true
     }
   ]
