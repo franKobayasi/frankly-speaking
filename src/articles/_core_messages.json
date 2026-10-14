@@ -1,9 +1,16 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-14T09:00:00",
+  "generated_at": "2026-10-14T11:00:00",
   "purpose": "AI trend 去重基底 — 每篇文章一句話核心訊息,新文章寫入前必須比對",
   "scope": "最近 20 篇 ai-trend-*.md",
   "entries": [
+    {
+      "date": "2026-10-14",
+      "slug": "2026-10-14-harness-judgment-assignment",
+      "title": "把判定權移出 agent 視線：AI 團隊持續交付的 8 條 Harness 設計紀實",
+      "core_message": "2026-10-14 研究紀實型長文,以 METR 2026-03-10「7× overstatement、約 296 個 SWE-bench PR 約一半不被合併」為切入,把焦點從「怎麼讓 agent 更可靠」翻轉為「把判定權從做事的 agent 拿走」。8 條原則按團隊層 harness 設計順序展開:postmortem 歸因單位是 harness 不是模型(OpenAI Codex 五個月經驗+Hashimoto+MAST NeurIPS 2025)、repo 是 agent 唯一現實(Anthropic long-running harness+IFScale 預印本 68% 遵守率)、寫入單線程(Cognition + Anthropic C compiler 16 agent 衝突)、模糊偵測獨立於執行(Ambig-SWE/LHAW/ClarifyCodeBench 三篇 ICLR/ICML 2026)、oracle 不能是執行者(METR 2025-06 reward hacking + SpecBench 30 tasks + Anthropic auto mode 93% approval + OpenAI CoT monitoring)、CI 綠燈弱 oracle 需異質 oracle(METR 2026 + LLM reviewer 偏誤四預印本 + Meta ACH/SWR-Bench/SAST)、人審位置不能是 rubber stamp(Skitka 1999 + Parasuraman & Manzey 2010 + Buçinca 2021 + Anthropic paradox of supervision)、產出速率服從審查產能(Faros 2025 +91% 審查時間 +154% PR 大小 + Faros 2026 +31.3% 無審查合併 + curl bug bounty 結束)。結論:瓶頸從生成移到驗證,每單位人類注意力應驗證更多正確性;附錄誠實列出 8 項查無實證與 3 類不一致數字,以及研究環境對 OpenAI/Cognition/Hashimoto 採 GitHub 鏡像的限制。",
+      "still_valid": true
+    },
     {
       "date": "2026-10-14",
       "slug": "2026-10-14-ai-contract-week-five-forces-frontier-lab",

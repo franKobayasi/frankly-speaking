@@ -262,3 +262,12 @@ Harness Engineering 不是關於讓 AI 變得更聽話，而是關於**系統性
 - OpenAI - Harness Engineering 團隊文件
 - Stripe - Minions 系統實戰分享
 - LangChain - Agent Harness Middleware 設計
+
+---
+
+## 延伸閱讀
+
+本篇是 Harness Engineering 的概念入門；如果你已經在設計團隊層的 agent 交付流程，下一步建議讀：
+
+- [Martin Fowler: Harness Engineering for Coding Agent Users](https://martinfowler.com/articles/harness-engineering.html) — Fowler 圈子的官方立場（與本系列 ai-trend-2026-10-07 互相呼應）
+- **[Harness 系列 #2｜2026-10-14] 把判定權移出 agent 視線：AI 團隊持續交付的 8 條 Harness 設計紀實** — 這篇的下集，從概念推進到「把完成判定權從 agent 拿走」的 8 條具體原則，以 METR 2026 的人類盲審數據（7× overstatement）為切入。
