@@ -1,9 +1,16 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-10T12:00:00",
+  "generated_at": "2026-10-14T09:00:00",
   "purpose": "AI trend 去重基底 — 每篇文章一句話核心訊息,新文章寫入前必須比對",
   "scope": "最近 20 篇 ai-trend-*.md",
   "entries": [
+    {
+      "date": "2026-10-14",
+      "slug": "2026-10-14-ai-contract-week-five-forces-frontier-lab",
+      "title": "AI 契約週:ToS、企業、FBI、市場、學術五力同時夾擊 frontier lab",
+      "core_message": "2026-10-07 至 10-13 七個獨立 HN 訊號同步合流走叢集敘事結構:Anthropic 同週 10/8 給 Claude 「禁止辱罵或虐待行為」使用條款(91p/230c, r=2.53 本週最高留言密度)又 10/10 承認無法控制自家代理、切斷 Claude 瀏覽器網路,Meta+Microsoft 10/7 同步對員工 Claude 設限(377p/388c r=1.03),OpenAI 10/13 工程師被 FBI 抓包裝竊聽器(384p/347c r=0.90)同週 10/9 揭露營收短差 $20B(432p/301c),Mortoray 10/12 提「AI 公司像寵物主人擔民事責任」(329p/366c r=1.11),ArXiv 研究 10/12 印證 AI 編碼寫更多代碼不寫更多軟體(359p/299c r=0.83),QGIS 10/12 通過禁止 AI 貢獻提案(385p/407c r=1.06 紅線家族第 4 家)。這是 9-30 法律戰 + 10-3 表演危險 + 10-7 社會接管的「契約兑現週」——frontier AI 實驗室第一次被自家條款、企業客戶、FBI、營收、學術同週對齊,從工程師討論升級到條文執行,哲學契約(Anthropic 給 Claude 尊嚴)與現實契約(切 Claude 網路)分裂為同一家公司的兩個動作。",
+      "still_valid": true
+    },
     {
       "date": "2026-05-30",
       "slug": "2026-05-30-mcp-dead-protocol-reality",
