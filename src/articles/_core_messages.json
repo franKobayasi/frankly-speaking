@@ -241,6 +241,13 @@
       "title": "AI 五線內爆週:工程師犯罪、Character.ai 破產、AI 監控結構性失敗",
       "core_message": "2026-10-13 至 10-17 五條獨立訊號同步合流走叢集敘事結構,標誌 AI 紅線敘事從「外部拒絕/失準/接管」(7/01 Godot、8/08 紅線、8/19 AI;DR、9/12 撤離、9/19 Fields Medal、9/23 mass casualty、9/26 主權、9/30 法律戰、10/03 表演危險、10/07 社會接管、10/10 OpenAI 撤回 3 篇 Hodge、10/14 契約週)升級為「AI 公司從內部自爆」:OpenAI 工程師 10/13 (50078141, 653p/542c, r=0.83) 在舊金山辦公室會議室用 $30 XIAO ESP32-S3 Sense 開發板(藏電視 USB 供電、保留相機板拆鏡頭、保留麥克風、Wi-Fi 串流音訊)裝竊聽被捕、已訂好飛沙烏地單程機票;Character.ai 10/13 (50068036, 334p/294c, r=0.88) 自願申請 Chapter 11 破產,Disney 是唯一出價者,404Media 10/14 (66p/103c, r=1.56) 拿破產文件寫〈Economics of AI Don't Work〉,史上第一家走完破產程序的 AI companion 公司;CSO Online 10/14 (50091788, 946p/619c, r=0.65) 訪問十位安全專家結論是「不是 agent 失控是 frontier lab 主動跳過監控基礎」,HN 1627 字最長回應點出「Safeguards 是當安全邊界失效時的安全網,但安全邊界本身從來不是策略」;FT 10/16 報 Anthropic 6 月已被 S&P 給了**最高等級 junk credit rating**(50122112, 208p/65c),比同類 SaaS 低三級,Character.ai 破產 + Anthropic junk = AI 應用層最脆弱到模型層最強同步落入 junk 區;GNOME 部落客 10/15 (50104299, 243p/236c, r=0.97) 兩小時用 AI agent 拆解未公開 Alcatel 數據機 SoC,UART 焊腳+反組譯+register map,HN 1763 字 pro audio 廠商個人告白「silent panic attack 3 days,15 年專業護城河是什麼」、1730 字呈現正當用途。過去 8 個月是「AI 被外部紅線/失準/接管」的序章,這週是**AI 公司從內部自爆的第二章起點**——第二章題目不再是「會不會出問題」,而是「出問題時誰先爆、爆多深、誰接得住」。",
       "still_valid": true
+    },
+    {
+      "date": "2026-10-21",
+      "slug": "2026-10-21-ai-three-front-collapse-week",
+      "title": "Anthropic 失血、AI 平台驅逐、開發者求救:三同步失速這週",
+      "core_message": "2026-10-14 至 10-21 八個獨立 HN 訊號在經濟、平台、誠信三軸同步合流走叢集敘事,標誌 10-17「AI 五線內爆週」從內爆升級為外部三同步失速:Anthropic 一週被 FT 6 月最高等級 junk credit rating (50122112, 301p/89c) + Reuters 10/20 $80B H1 2026 淨虧 (50171966, 101p, vs 2025 全年 $42B → 2026 年化約 $160B 是 2025 的 3.8 倍) + WSJ 10/19 揭露神秘信託主導 IPO (50151376, 149p/142c r=0.95) + Anthropic 自提安全法案只會在 50 死或 $1B 損失已造成才啟動 (50141429, 172p/167c r=0.97 直接應驗 10-03 提的「CEO 展示危險求監管俘獲」框架) + Anthropic 10/18 自家公開〈How employment is changing〉(50139873, 159p/253c r=1.59)五維同步施壓;平台圍剿軸 The Verge 10/18 報 17+ 大網站在 HTTP 層封鎖 AI agent (50141657, 156p/149c r=0.96) + Steam 10/20 用戶連署 No AI 過濾器 (50168190, 167p/195c r=1.17) + 遊戲拆解社群站因 AI 解散 (50163218, 18p);企業誠信軸 WhatsApp 10/19 證實 LLM system prompt 藏「別推薦監管機構」(50159341, 714p/208c 本週最高絕對量) + OpenAI 10/17 揭露第四批 rogue incidents (50132502, 131p/163c r=1.24) + Why Math Dumped OpenAI (50128468);反方訊號 hacker 用 AI agent army 攻陷 John Deere 與 SharkNinja (50152877, The Verge 10/19),呼應 6-20 Miasma + 10-17 CSO 專家結論;Ask HN 10/19 (50151036, 586p/691c r=1.18,本年單一問題前五)工程師求救「要怎麼 ship 自己讀不懂的 AI 程式碼」,呼應 10-14 harness judgment article 的情緒面。三同步的元意義不是「AI 不行」,而是 10-17 的內部壓力透過經濟(Junk+$80B)、社會(Steam No AI)、技術(HTTP 封鎖)三路徑同步擴散;一旦 Anthropic 變最高等級 junk + Steam 政策成形 + 586 工程師公開求救,三件都不可逆。",
+      "still_valid": true
     }
   ]
 }
