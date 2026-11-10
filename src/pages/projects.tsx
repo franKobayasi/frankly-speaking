@@ -20,6 +20,13 @@ const projects = [
     description: 'A framework for creating Autonomous Development Environments that grow with you. Provides structured development workflows with quality gates, knowledge persistence, and intelligent agent coordination.',
     tags: ['TypeScript', 'AI Agent', 'Development Framework', 'Claude Code'],
     link: 'https://github.com/franKobayasi/helix'
+  },
+  {
+    id: '3',
+    title: 'agentic-dev-env',
+    description: 'A CLI that scaffolds team knowledge repos for AI agents — centralize domain knowledge, workflows, and product specs that agents can consume, develop with, and keep fresh through PR loops. Ships seventeen ade-* skills that inject the same shared context into Claude Code, Codex, Cursor, and Kiro.',
+    tags: ['JavaScript', 'Node.js', 'CLI', 'AI Agent', 'Developer Tools'],
+    link: 'https://github.com/franKobayasi/agentic-dev-env'
   }
 ]
 
